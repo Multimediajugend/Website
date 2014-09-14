@@ -15,23 +15,20 @@
 
 			a {
 				color: #dc5130;
-				outline:none;
+				outline: none;
 			}
 
-			a:hover {
-				text-decoration: underline;
-			}
+				a:hover {
+					text-decoration: underline;
+				}
 
 			h1 {
-
 			}
 
 			h2 {
-
 			}
 
 			h3 {
-
 			}
 		}
 
@@ -80,6 +77,12 @@
 			margin-top: 40px;
 		}
 
+			#bigPictures > a {
+				text-decoration: none;
+				border: none;
+				color: #999;
+			}
+
 		.bigPicture {
 			float: left;
 			width: 220px;
@@ -89,6 +92,10 @@
 			-moz-box-shadow: 0px 0px 2px #ddd;
 			-webkit-box-shadow: 0px 0px 2px #ddd;
 		}
+
+			.bigPicture:hover {
+				background-color: #f7f7f7;
+			}
 
 		.bigPicturePadding {
 			padding: 10px 19px 34px;
@@ -113,7 +120,7 @@
 			margin-bottom: 10px;
 			border-bottom: 1px solid #e4e4e4;
 		}
-		
+
 		#news {
 			clear: both;
 		}
@@ -135,12 +142,20 @@
 			line-height: 2em;
 			padding: 10px 0px;
 		}
-		
+
 		#footer {
 			border-top: 1px solid #e4e4e4;
 			margin-top: 50px;
 			padding: 20px 0px;
 			color: #4c4c4c;
+		}
+
+		#footerbox {
+			float:left;
+		}
+
+		#footerbox.last {
+			clear:both;
 		}
 
 		.color-1 {
@@ -180,39 +195,47 @@
 			Multimediale Jugendarbeit Sachsen e.V.
 		</div>
 		<div id="bigPictures">
-			<div class="bigPicture">
-				<img src="bigPicture1.jpg" />
-				<div class="bigPicturePadding">
-					<div class="bigPictureTitle color-1">Lanparty</div>
-					<div class="bigPictureDescription">Hier ein ganz kurzer Teaser auf die Kategorie.</div>
+			<a href="start.html">
+				<div class="bigPicture">
+					<img src="bigPicture1.jpg" />
+					<div class="bigPicturePadding">
+						<div class="bigPictureTitle color-1">Lanparty</div>
+						<div class="bigPictureDescription">Hier ein ganz kurzer Teaser auf die Kategorie.</div>
+					</div>
 				</div>
-			</div>
-			<div class="bigPicture">
-				<img src="bigPicture2.jpg" />
-				<div class="bigPicturePadding">
-					<div class="bigPictureTitle color-2">Musik</div>
-					<div class="bigPictureDescription">Hier ein ganz kurzer Teaser auf die Kategorie.</div>
+			</a>
+			<a href="start.html">
+				<div class="bigPicture">
+					<img src="bigPicture2.jpg" />
+					<div class="bigPicturePadding">
+						<div class="bigPictureTitle color-2">Musik</div>
+						<div class="bigPictureDescription">Hier ein ganz kurzer Teaser auf die Kategorie.</div>
+					</div>
 				</div>
-			</div>
-			<div class="bigPicture">
-				<img src="bigPicture3.jpg" />
-				<div class="bigPicturePadding">
-					<div class="bigPictureTitle color-3">Sport</div>
-					<div class="bigPictureDescription">Hier ein ganz kurzer Teaser auf die Kategorie.</div>
+			</a>
+			<a href="start.html">
+				<div class="bigPicture">
+					<img src="bigPicture3.jpg" />
+					<div class="bigPicturePadding">
+						<div class="bigPictureTitle color-3">Sport</div>
+						<div class="bigPictureDescription">Hier ein ganz kurzer Teaser auf die Kategorie.</div>
+					</div>
 				</div>
-			</div>
-			<div class="bigPicture last">
-				<img src="bigPicture4.jpg" />
-				<div class="bigPicturePadding">
-					<div class="bigPictureTitle color-4">Der Verein</div>
-					<div class="bigPictureDescription">Hier ein ganz kurzer Teaser auf die Kategorie.</div>
+			</a>
+			<a href="start.html">
+				<div class="bigPicture last">
+					<img src="bigPicture4.jpg" />
+					<div class="bigPicturePadding">
+						<div class="bigPictureTitle color-4">Der Verein</div>
+						<div class="bigPictureDescription">Hier ein ganz kurzer Teaser auf die Kategorie.</div>
+					</div>
 				</div>
-			</div>
+			</a>
 		</div>
 		<div id="news">
 			<div id="newsTitle">Aktuelles</div>
 			<div id="newsSingle">
-				<div id="newsHeadline">Ein Wocheneder der Medien</div>
+				<div id="newsHeadline">Ein Wochenende der Medien</div>
 				<div id="newsTeaser">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</div>
 				<div id="newsMeta">
 					<a href="news.php?id=1">weiterlesen</a><br />
@@ -220,7 +243,7 @@
 				</div>
 			</div>
 			<div id="newsSingle">
-				<div id="newsHeadline">Ein Wocheneder der Medien</div>
+				<div id="newsHeadline">Ein Wochenende der Medien</div>
 				<div id="newsTeaser">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</div>
 				<div id="newsMeta">
 					<a href="news.php?id=1">weiterlesen</a><br />
@@ -229,8 +252,12 @@
 			</div>
 		</div>
 		<div id="footer">
-			Impressum and Copyright 2014...<br />
-			Multiline und blabla...
+			<div id="footerbox">
+				Weiter Projekte:<br />
+				<a href="http://www.hsf-clanwars.de" target="_blank">www.hsf-clanwars.de</a><br />
+				<a href="http://www.damnsmalllan.de" target="_blank">www.damnsmalllan.de</a>
+			</div>
+			<div id="footerbox last">Copyright 2010-2013 Design, Logo and Content by Multimediale Jugendarbeit Sachsen e.V.</div>
 		</div>
 	</div>
 </body>
