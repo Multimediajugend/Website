@@ -1,0 +1,195 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>mjs | Start</title>
+    <link rel="stylesheet" href="css/template.css">
+    <style type="text/css">
+        .memberWrapper {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .memberGrid {
+            float: left;
+            position: relative;
+        }
+
+        .memberImage {
+            float: left;
+            width: 80px;
+            height: 85px;
+        }
+
+        .left {
+            width: 630px;
+            margin-left: 0;
+            margin-right: 30px;
+        }
+
+        .right {
+            width: 300px;
+            margin-right: 0;
+        }
+
+        .memberSingle {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            margin-top: 20px;
+            color: #999;
+        }
+
+        .memberExtra {
+            overflow: hidden;
+            padding: 5px 20px;
+        }
+
+        .memberName {
+            font-family: 'Nunito', Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            color: #FA4920;
+            float: left;
+            margin-right: 10px;
+        }
+
+        .memberJob {
+            font-size: 11px;
+            color: #999;
+        }
+
+        .memberJoinDescription {
+            margin-bottom: 10px;
+        }
+    </style>
+    <link href='http://fonts.googleapis.com/css?family=Nunito:400' rel='stylesheet' type='text/css'>
+
+    <script src="scripts/jquery-2.1.1.min.js" type="text/javascript"></script>
+
+</head>
+<body>
+    <div data-content="main" id="main">
+        <div id="header">
+            <img src="images/mjslogo.svg" height="120" />
+            <span id="topNav">
+                <a href="start.html">Start</a>
+                <a class="active" href="member.html">Mitglieder</a>
+                <a href="gallery.html">Galerie</a>
+                <a href="https://facebook.com/multimediajugend" target="_blank">Facebook</a>
+            </span>
+        </div>
+        <div id="motd">
+            Multimediale Jugendarbeit Sachsen e.V.
+        </div>
+        <div id="member">
+            <div class="memberWrapper">
+                <div class="memberGrid left">
+                    <div class="pageTitle">Der Vorstand</div>
+                    <div class="memberSingle">
+                        <div class="memberImage">
+                            <img src="images/member/member1.jpg" />
+                        </div>
+                        <div class="memberExtra">
+                            <div class="memberName">Stefan Haslinger</div>
+                            <div class="memberJob">Vorsitzender</div>
+                            <div class="memberDescription">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</div>
+                        </div>
+                    </div>
+                    <div class="memberSingle">
+                        <div class="memberImage">
+                            <img src="images/member/member2.jpg" />
+                        </div>
+                        <div class="memberExtra">
+                            <div class="memberName">Sebastian Flemig</div>
+                            <div class="memberJob">Stellvertetender Vorsitzender</div>
+                            <div class="memberDescription">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan.</div>
+                        </div>
+                    </div>
+                    <div class="memberSingle">
+                        <div class="memberImage">
+                            <img src="images/member/member3.jpg" />
+                        </div>
+                        <div class="memberExtra">
+                            <div class="memberName">Daniela Kurz</div>
+                            <div class="memberJob">Schriftführerin</div>
+                            <div class="memberDescription">Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</div>
+                        </div>
+                    </div>
+                    <div class="memberSingle">
+                        <div class="memberImage">
+                            <img src="images/member/member4.jpg" />
+                        </div>
+                        <div class="memberExtra">
+                            <div class="memberName">Ronny Wienhold</div>
+                            <div class="memberJob">Projektbeauftragter</div>
+                            <div class="memberDescription">Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</div>
+                        </div>
+                    </div>
+                    <div class="memberSingle">
+                        <div class="memberImage">
+                            <img src="images/member/member5.jpg" />
+                        </div>
+                        <div class="memberExtra">
+                            <div class="memberName">Martin Meyer</div>
+                            <div class="memberJob">Schatzmeister</div>
+                            <div class="memberDescription">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="memberGrid right">
+                    <div class="pageTitle">Mitglieder</div>
+                    <ul class="memberList">
+                        <li class="memberEntry">Ansgar Fischer</li>
+                        <li class="memberEntry">David Fritsche</li>
+                        <li class="memberEntry">J&ouml;rg Weber</li>
+                        <li class="memberEntry">Lisa Bemmann</li>
+                        <li class="memberEntry">Nicole Winkler</li>
+                        <li class="memberEntry">Robert Haslinger</li>
+                        <li class="memberEntry">Sophie Uhlig</li>
+                        <li class="memberEntry">Thomas Junghänel</li>
+                        <li class="memberEntry">Tilmann Bach</li>
+                    </ul>
+                    <div class="memberJoin">
+                        <div class="memberJoinDescription">Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</div>
+                        <div class="button">Mitglied werden</div>
+                    </div>
+                    
+                    <!--<a href="gallery.html">
+                        <div class="gallerySingle">
+                            <div class="galleryImage">
+                                <img src="images/gallery/preview2.jpg" /></div>
+                            <div class="galleryExtra">
+                                <div class="galleryTitle">Radtour 2014 #1</div>
+                                <div class="galleryDate">25.05.2014</div>
+                                <div class="galleryDescription">Die Radtour ging durch den Norden von Chemnitz entlang des Chemnitztalradwegs bis hin zu den Felsendomen Rabenstein.</div>
+                            </div>
+                        </div>
+                    </a>
+
+                   
+                    <a href="gallery.html">
+                        <div class="gallerySingle">
+                            <div class="galleryImage">
+                                <img src="images/gallery/preview4.jpg" /></div>
+                            <div class="galleryExtra">
+                                <div class="galleryTitle">Clanwars X</div>
+                                <div class="galleryDate">01.11.-03.11.2013</div>
+                                <div class="galleryDescription">Die Jubiläumsausgabe der legendären Lanpary "Clanwars".</div>
+                            </div>
+                        </div>
+                    </a>-->
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div id="footerbox">
+                Weiter Projekte:<br />
+                <a href="http://www.hsf-clanwars.de" target="_blank">www.hsf-clanwars.de</a><br />
+                <a href="http://www.damnsmalllan.de" target="_blank">www.damnsmalllan.de</a>
+            </div>
+            <div id="footerbox last">Copyright 2010-2013 Design, Logo and Content by Multimediale Jugendarbeit Sachsen e.V.</div>
+        </div>
+    </div>
+</body>
+</html>
