@@ -15,7 +15,7 @@
         color: #FA4920;
         outline: none;
         text-decoration: none;
-		border:0px;
+	border-style: none;
     }
 
         a:hover {
