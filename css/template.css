@@ -15,12 +15,11 @@
         color: #FA4920;
         outline: none;
         text-decoration: none;
-	border-style: none;
     }
 
         a:hover {
-            color: #CE2A04;
-            text-decoration: none;
+        color: #CE2A04;
+        text-decoration: none;
         }
 
     h1 {
@@ -34,6 +33,7 @@
 
     img {
         vertical-align: top;
+        border: 0;
     }
 
     .button {
