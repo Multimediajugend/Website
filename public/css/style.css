@@ -15,11 +15,12 @@
         color: #FA4920;
         outline: none;
         text-decoration: none;
+		border:0px;
     }
 
         a:hover {
-        color: #CE2A04;
-        text-decoration: none;
+            color: #CE2A04;
+            text-decoration: none;
         }
 
     h1 {
@@ -33,7 +34,6 @@
 
     img {
         vertical-align: top;
-        border: 0;
     }
 
     .button {
@@ -119,4 +119,128 @@
     margin-bottom: 10px;
     border-bottom: 1px solid #e4e4e4;
     color: #4c4c4c;
+}
+
+.memberWrapper {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+.memberGrid {
+	float: left;
+	position: relative;
+}
+
+.memberImage {
+	float: left;
+	width: 80px;
+	height: 85px;
+}
+
+.left {
+	width: 630px;
+	margin-left: 0;
+	margin-right: 30px;
+}
+
+.right {
+	width: 300px;
+	margin-right: 0;
+}
+
+.memberSingle {
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	margin-top: 20px;
+	color: #999;
+}
+
+.memberExtra {
+	overflow: hidden;
+	padding: 5px 20px;
+}
+
+.memberName {
+	font-family: 'Nunito', Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #FA4920;
+	float: left;
+	margin-right: 10px;
+}
+
+.memberJob {
+	font-size: 11px;
+	color: #999;
+}
+
+.memberJoinDescription {
+	margin-bottom: 10px;
+}
+
+.galleryWrapper {
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	margin-top: 30px;
+}
+
+.galleryGrid {
+	width: 470px;
+	float: left;
+	position: relative;
+}
+
+.galleryImage {
+	float: left;
+	width: 220px;
+	height: 176px;
+}
+
+.left {
+	margin-left: 0;
+	margin-right: 20px;
+}
+
+.right {
+	margin-right: 0;
+}
+
+.gallerySingle {
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	margin-bottom: 30px;
+	background-color: #fff;
+	box-shadow: 0px 0px 2px #ddd;
+	-moz-box-shadow: 0px 0px 2px #ddd;
+	-webkit-box-shadow: 0px 0px 2px #ddd;
+	color: #999;
+}
+
+	.gallerySingle:hover {
+		background-color: #f7f7f7;
+	}
+
+.galleryExtra {
+	overflow: hidden;
+	padding: 5px 20px;
+}
+
+.galleryTitle {
+	display: block;
+	font-family: 'Nunito', Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	line-height: 2em;
+	letter-spacing: -1px;
+	text-indent: 8px;
+	padding-bottom: 1px;
+	margin-bottom: 0;
+	border-bottom: 1px solid #e4e4e4;
+	color: #FA4920;
+}
+
+.galleryDate {
+	font-size: 10px;
 }
