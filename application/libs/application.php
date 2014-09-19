@@ -56,10 +56,10 @@ class Application
                 $this->url_controller->index();
             }
         } else {
-            // invalid URL, so simply show home/index
-            require './application/controller/home.php';
-            $home = new Home();
-            $home->index();
+            // invalid URL, so simply show start/index
+            require './application/controller/start.php';
+            $start = new Start();
+            $start->index();
         }
     }
 
