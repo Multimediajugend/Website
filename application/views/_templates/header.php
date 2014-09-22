@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- css -->
     <link href="<?php echo URL; ?>public/css/style.css" rel="stylesheet">
+    <!-- fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Nunito:400' rel='stylesheet' type='text/css'>
     <!-- jQuery -->
     <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
     <!-- our JavaScript -->
