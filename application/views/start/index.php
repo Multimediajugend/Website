@@ -1,5 +1,5 @@
 <div id="bigPictures">
-	<a href="<?php echo URL; ?>Start/Kooperation">
+	<a href="<?php echo URL; ?>start/kooperation">
 		<div class="bigPicture">
 			<img src="<?php echo URL; ?>public/img/start/bigPicture1.jpg" />
 			<div class="bigPicturePadding">
@@ -8,7 +8,7 @@
 			</div>
 		</div>
 	</a>
-	<a href="<?php echo URL; ?>Start/Technik">
+	<a href="<?php echo URL; ?>start/technik">
 		<div class="bigPicture">
 			<img src="<?php echo URL; ?>public/img/start/bigPicture2.jpg" />
 			<div class="bigPicturePadding">
@@ -17,7 +17,7 @@
 			</div>
 		</div>
 	</a>
-	<a href="<?php echo URL; ?>Start/Musik">
+	<a href="<?php echo URL; ?>start/musik">
 		<div class="bigPicture">
 			<img src="<?php echo URL; ?>public/img/start/bigPicture3.jpg" />
 			<div class="bigPicturePadding">
@@ -26,7 +26,7 @@
 			</div>
 		</div>
 	</a>
-	<a href="<?php echo URL; ?>Start/Sport">
+	<a href="<?php echo URL; ?>start/sport">
 		<div class="bigPicture last">
 			<img src="<?php echo URL; ?>public/img/start/bigPicture4.jpg" />
 			<div class="bigPicturePadding">

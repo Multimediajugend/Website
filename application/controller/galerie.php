@@ -27,7 +27,7 @@ class Galerie extends Controller
         //$stats_model = $this->loadModel('StatsModel');
         //$amount_of_songs = $stats_model->getAmountOfSongs();
 		
-        $title = 'Galeire';
+        $title = 'Galerie';
 		$active = 'gallery';
 
         // load views. within the views we can echo out $songs and $amount_of_songs easily
