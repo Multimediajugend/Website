@@ -8,11 +8,11 @@
 			</div>
 		</div>
 	</a>
-	<a href="<?php echo URL; ?>Start/Lanparty">
+	<a href="<?php echo URL; ?>Start/Technik">
 		<div class="bigPicture">
 			<img src="<?php echo URL; ?>public/img/start/bigPicture2.jpg" />
 			<div class="bigPicturePadding">
-				<div class="bigPictureTitle color-2">Lanparty</div>
+				<div class="bigPictureTitle color-2">Technik</div>
 				<div class="bigPictureDescription">Hier ein ganz kurzer Teaser auf die Kategorie.</div>
 			</div>
 		</div>

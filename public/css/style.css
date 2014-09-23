@@ -282,7 +282,7 @@
 	margin-right: 20px;
 }
 
-.right {
+div.right {
 	margin-right: 0;
 }
 
@@ -322,4 +322,13 @@
 
 .galleryDate {
 	font-size: 10px;
+}
+
+.subGalleryImage {
+    float: left;
+    width: 220px;
+    height: 176px;
+    margin-bottom: 26.66px;
+    margin-right: 26.66px;
+    cursor: pointer;
 }

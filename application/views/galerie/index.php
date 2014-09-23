@@ -2,7 +2,7 @@
 	<div class="pageTitle">Galerie</div>
 	<div class="galleryWrapper">
 		<div class="galleryGrid left">
-			<a href="subGallery.html">
+			<a href="<?php echo URL; ?>Galerie/Untergalerie/Radtour_2014_2">
 				<div class="gallerySingle">
 					<div class="galleryImage">
 						<img src="<?php echo URL; ?>public/img/gallery/preview1.jpg" /></div>
@@ -13,7 +13,7 @@
 					</div>
 				</div>
 			</a>
-			 <a href="subGallery.html">
+			 <a href="<?php echo URL; ?>Galerie/Untergalerie/Chemnitz_zockt">
 				<div class="gallerySingle">
 					<div class="galleryImage">
 						<img src="<?php echo URL; ?>public/img/gallery/preview3.jpg" /></div>
@@ -24,7 +24,7 @@
 					</div>
 				</div>
 			</a>
-			<a href="subGallery.html">
+			<a href="<?php echo URL; ?>Galerie/Untergalerie/Radtour_2013">
 				<div class="gallerySingle">
 					<div class="galleryImage">
 						<img src="<?php echo URL; ?>public/img/gallery/preview5.jpg" /></div>
@@ -37,7 +37,7 @@
 			</a>
 		</div>
 		<div class="galleryGrid right">
-			<a href="subGallery.html">
+			<a href="<?php echo URL; ?>Galerie/Untergalerie/Radtour_2014_1">
 				<div class="gallerySingle">
 					<div class="galleryImage">
 						<img src="<?php echo URL; ?>public/img/gallery/preview2.jpg" /></div>
@@ -48,7 +48,7 @@
 					</div>
 				</div>
 			</a>
-			<a href="subGallery.html">
+			<a href="<?php echo URL; ?>Galerie/Untergalerie/Clanwars_X">
 				<div class="gallerySingle">
 					<div class="galleryImage">
 						<img src="<?php echo URL; ?>public/img/gallery/preview4.jpg" /></div>

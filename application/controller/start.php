@@ -32,12 +32,12 @@ class Start extends Controller
         require 'application/views/_templates/footer.php';
 	}
 		
-	public function lanparty()
+	public function technik()
 	{
         // load views. within the views we can echo out $songs and $amount_of_songs easily
-		$title = 'Lanparty';
+		$title = 'Technik';
         require 'application/views/_templates/header.php';
-        require 'application/views/start/lanparty.php';
+        require 'application/views/start/technik.php';
         require 'application/views/_templates/footer.php';
 	}
 		
