@@ -19,7 +19,7 @@ if (file_exists('vendor/autoload.php')) {
 require 'application/config/config.php';
 
 // load application class
-require 'application/libs/functions.php':
+require 'application/libs/functions.php';
 require 'application/libs/application.php';
 require 'application/libs/controller.php';
 
