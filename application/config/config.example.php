@@ -18,14 +18,14 @@ ini_set("display_errors", 1);
  * Configuration for: Project URL
  * Put your URL here, for local development "127.0.0.1" or "localhost" (plus sub-folder) is fine
  */
-define('URL', 'http://127.0.0.1/Website/');
+define('URL', 'http://example.com/Website/');
 
 /**
  * Configuration for: Database
  * This is the place where you define your database credentials, database type etc.
  */
 define('DB_TYPE', 'mysql');
-define('DB_HOST', '127.0.0.1');
-define('DB_NAME', 'php-mvc');
+define('DB_HOST', 'localhost');
+define('DB_NAME', 'mjs-2014');
 define('DB_USER', 'root');
 define('DB_PASS', '');
