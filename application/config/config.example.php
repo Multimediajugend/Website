@@ -21,6 +21,12 @@ ini_set("display_errors", 1);
 define('URL', 'http://example.com/Website/');
 
 /**
+ * Configuration for: Having more secure passwords
+ * Put a little salt here
+ */
+define('SALT', '!§$%&1n467');
+ 
+/**
  * Configuration for: Database
  * This is the place where you define your database credentials, database type etc.
  */
