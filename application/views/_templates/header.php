@@ -11,6 +11,8 @@
     <link href='http://fonts.googleapis.com/css?family=Nunito:400' rel='stylesheet' type='text/css'>
     <!-- jQuery -->
     <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<!-- easyModal.js (flaviusmatis) -->
+	<script src="<?php echo URL; ?>public/js/jquery.easyModal.js"></script>
     <!-- our JavaScript -->
     <script src="<?php echo URL; ?>public/js/application.js"></script>
 </head>
@@ -25,7 +27,7 @@
                 <a <?php if(isset($active) && $active=='gallery') echo 'class="active" '; ?>href="<?php echo URL; ?>galerie">Galerie</a>
                 <a href="https://facebook.com/multimediajugend" target="_blank">Facebook</a>
             </span>
-        </div>
-        <div id="motd">
-            Multimediale Jugendarbeit Sachsen e.V.
+	</div>
+	<div id="motd">
+		Multimediale Jugendarbeit Sachsen e.V.
 	</div>
