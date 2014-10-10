@@ -186,8 +186,9 @@
 	padding: 0 20px;
 }
 
-.footerbox .last {
-	clear: both;
+.footerbox.middle {
+	border-left: 1px solid #e4e4e4;
+	border-right: 1px solid #e4e4e4;
 }
 
 .pageTitle {
