@@ -5,6 +5,8 @@
     <title><?php if(isset($title)) echo $title.' - '; ?>Multimediale Jugendarbeit Sachsen e.V.</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FavIcon -->
+    <link rel="shortcut icon" href="<?php echo URL; ?>public/img/favicon.ico" type="image/x-icon" />
     <!-- css -->
     <link href="<?php echo URL; ?>public/css/style.css" rel="stylesheet">
 	<!-- font awesome -->

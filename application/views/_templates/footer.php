@@ -1,6 +1,6 @@
 	<div id="footer">
 		<div class="footerbox">
-			Weiter Projekte:<br />
+			Weitere Projekte:<br />
 			<a href="http://www.hsf-clanwars.de" target="_blank"><i class="fa fa-external-link fa-fw"></i> www.hsf-clanwars.de</a><br />
 			<a href="http://www.damnsmalllan.de" target="_blank"><i class="fa fa-external-link fa-fw"></i> www.damnsmalllan.de</a>
 		</div>
