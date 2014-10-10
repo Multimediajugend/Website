@@ -1,12 +1,8 @@
 <?php
 
 /**
- * Class Songs
- * This is a demo class.
- *
- * Please note:
- * Don't use the same name for class and method, as this might trigger an (unintended) __construct of the class.
- * This is really weird behaviour, but documented here: http://php.net/manual/en/language.oop5.decon.php
+ * Class Json
+ * This is for all the json handling
  *
  */
 class Json extends Controller
@@ -17,17 +13,6 @@ class Json extends Controller
      */
     public function index()
     {
-        // load a model, perform an action, pass the returned data to a variable
-        // NOTE: please write the name of the model "LikeThis"
-        //$songs_model = $this->loadModel('SongsModel');
-        //$songs = $songs_model->getAllSongs();
-
-        // load another model, perform an action, pass the returned data to a variable
-        // NOTE: please write the name of the model "LikeThis"
-        //$stats_model = $this->loadModel('StatsModel');
-        //$amount_of_songs = $stats_model->getAmountOfSongs();
-
-        // load views. within the views we can echo out $songs and $amount_of_songs easily
         require 'application/views/_templates/header.json.php';
         require 'application/views/json/index.php';
         require 'application/views/_templates/footer.json.php';
@@ -37,6 +22,23 @@ class Json extends Controller
     {    
         require 'application/views/_templates/header.json.php';
         require 'application/views/json/login.php';
+        require 'application/views/_templates/footer.json.php';
+    }
+	
+	public function checkToken()
+    {    
+		$auth = $this->loadModel('AuthenticationModel');
+		
+		if(isset($_GET["token"]))
+		{
+			$token = $_GET["token"];
+			$userid = $auth->checkToken($token);
+			if($userid)
+				$user = $auth->getUserData($userid);
+		}
+		
+        require 'application/views/_templates/header.json.php';
+        require 'application/views/json/checktoken.php';
         require 'application/views/_templates/footer.json.php';
     }
 }

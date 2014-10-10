@@ -30,14 +30,13 @@ if(isset($data->email) && isset($data->password))
 			"email" => $row->email,
 			); 
 	}
-
 }
 
 if($authenticated)
 {
 	$token = md5(myuniqid());
 
-	$sql = "INSERT INTO `authentication_tokens` (`id`, `token`, `lastused`) VALUES ('".myuniqid()."', '".$token."', CURRENT_TIMESTAMP());";
+	$sql = "INSERT INTO `authentication_tokens` (`id`, `token`, `lastused`, `userid`) VALUES ('".myuniqid()."', '".$token."', CURRENT_TIMESTAMP(), ".$row->id.");";
 	$query = $this->db->prepare($sql);
     $query->execute();
 	
