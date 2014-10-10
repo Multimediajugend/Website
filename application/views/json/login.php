@@ -11,22 +11,23 @@ $authenticated = false;
 
 if(isset($data->email) && isset($data->password))
 {
-	$query = mysql_query("SELECT * FROM `users` WHERE `email`='".$data->email."' AND `password`='".md5($data->password.SALT)."';");
-
-	$num_results = mysql_num_rows($query);
+	$sql = "SELECT * FROM `users` WHERE `email`='".$data->email."' AND `password`='".md5($data->password.SALT)."';";
+    $query = $this->db->prepare($sql);
+    $query->execute();
+	$num_results = $query->rowCount();
 	
 	if($num_results > 0)
 	{
-		$row = mysql_fetch_assoc ($query);
+		$row = $query->fetch();
 		
 		$authenticated = true;
 		
 		$user = array(
-			"id" => $row['id'],
-			"firstname" => $row['firstname'],
-			"lastname" => $row['lastname'],
-			"lastlogin" => $row['lastlogin'],
-			"email" => $row['email'],
+			"id" => $row->id,
+			"firstname" => $row->firstname,
+			"lastname" => $row->lastname,
+			"lastlogin" => $row->lastlogin,
+			"email" => $row->email,
 			); 
 	}
 
@@ -34,15 +35,17 @@ if(isset($data->email) && isset($data->password))
 
 if($authenticated)
 {
-$token = md5(myuniqid());
+	$token = md5(myuniqid());
 
-mysql_query("INSERT INTO `authentication_tokens` (`id`, `token`, `lastused`) VALUES ('".myuniqid()."', '".$token."', CURRENT_TIMESTAMP());");
-
-$output = array(
-	"type" => 'success',
-	"token" => $token,
-	"user" => $user,
-	); 
+	$sql = "INSERT INTO `authentication_tokens` (`id`, `token`, `lastused`) VALUES ('".myuniqid()."', '".$token."', CURRENT_TIMESTAMP());";
+	$query = $this->db->prepare($sql);
+    $query->execute();
+	
+	$output = array(
+		"type" => 'success',
+		"token" => $token,
+		"user" => $user,
+		); 
 }
 else
 {

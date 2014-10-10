@@ -389,7 +389,7 @@ div.right {
 	margin-bottom: 25px;
 }
 
-#loginModal .btn a {
+#loginModal .btn button {
 	float: left;
 	padding: 0 20px;
 	line-height: 28px;
@@ -403,11 +403,21 @@ div.right {
 	border: none;
 }
 
-#loginModal .btn a.cancel {
+#loginModal .btn button.cancel {
 	background: #DDDDDD;
 	box-shadow: none;
 	color: #333;
 	text-shadow: 0 1px 0 rgba(255,255,255,0.25);
 }
 
+#admin {
+	display:none;
+	background-color: #000;
+	padding: 5px;
+}
 
+#loginErrorMessage {
+	display:none;
+	background-color: #FA4920;
+	color:white;
+}

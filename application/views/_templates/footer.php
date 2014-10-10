@@ -17,7 +17,10 @@
 		<div class="modalHeader">
 			<h3>Administration</h3>
 		</div>
-		<form action="">
+		<form onSubmit="login()">
+			<div class="txt error" id="loginErrorMessage">
+				Login fehlgeschlagen!
+			</div>
 			<div class="txt">
 				<label for="loginEmail">Email:</label>
 				<input id="loginEmail" type="text">
@@ -27,8 +30,8 @@
 				<input id="loginPassword" type="password">
 			</div>
 			<div class="btn clearfix">
-				<a href="" onClick="login(); return false;">Login</a>
-				<a class="close cancel" href="#">Abbruch</a>
+				<button type="submit" onClick="login(); return false;">Login</button>
+				<button class="close cancel">Abbruch</button>
 			</div>
 		</form>
 	</div>
