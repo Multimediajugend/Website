@@ -26,7 +26,7 @@
 	<div id="header">
             <a href="<?php echo URL; ?>"><img src="<?php echo URL; ?>public/img/mjslogo.svg" height="120" /></a>
             <span id="topNav">
-                <a <?php if(!isset($active)) echo 'class="active" '; ?>href="<?php echo URL; ?>"><i class="fa fa-home fa-fw"></i> Start</a>
+                <a <?php if(isset($active) && $active=='start') echo 'class="active" '; ?>href="<?php echo URL; ?>"><i class="fa fa-home fa-fw"></i> Start</a>
                 <a <?php if(isset($active) && $active=='member') echo 'class="active" '; ?>href="<?php echo URL; ?>mitglieder"><i class="fa fa-group fa-fw"></i> Mitglieder</a>
                 <a <?php if(isset($active) && $active=='gallery') echo 'class="active" '; ?>href="<?php echo URL; ?>galerie"><i class="fa fa-photo fa-fw"></i> Galerie</a>
                 <a href="https://facebook.com/multimediajugend" target="_blank"><i class="fa fa-facebook fa-fw"></i> Facebook</a>

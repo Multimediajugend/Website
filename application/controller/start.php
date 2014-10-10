@@ -18,6 +18,8 @@ class Start extends Controller
     {
         // load views. within the views we can echo out $songs and $amount_of_songs easily
 		$title = 'Start';
+		$active = 'start';
+		
         require 'application/views/_templates/header.php';
         require 'application/views/start/index.php';
         require 'application/views/_templates/footer.php';
