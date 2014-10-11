@@ -1,13 +1,12 @@
 // common way to initialize jQuery
-$(function() {
+$(function () {
 	// initialize things....
 	$("#loginErrorMessage").hide();
 	$('[data-content="admin"]').hide();
 
 
-	//check if token is still valid
-	if(localStorage.getItem("token") && !sessionStorage.getItem("id"))
-	{
+	//check if token is still valid and session storage is still empty (first visit)
+	if (localStorage.getItem("token") && !sessionStorage.getItem("id")) {
 		//CHECK IF TOKEN IS STILL VALID!
 		var dataUrl = "json/checktoken?token=" + localStorage.getItem("token");
 
@@ -19,8 +18,7 @@ $(function() {
 			error: function (o, c, m) { throw (m); }
 		});
 
-		function processCheckResponse(data)
-		{
+		function processCheckResponse(data) {
 			switch (data.type) {
 				case 'failure':
 					endAdmin();
@@ -32,6 +30,10 @@ $(function() {
 					break;
 			}
 		}
+	}
+	//start adminpnale if session storage is already set (navigated from one page to another)
+	else if (sessionStorage.getItem("id")) {
+		startAdmin();
 	}
 });
 
@@ -68,8 +70,7 @@ function login() {
 		error: function (o, c, m) { throw (m); }
 	});
 
-	function processLoginResponse(data)
-	{
+	function processLoginResponse(data) {
 		switch (data.type) {
 			case 'failure':
 				$("#loginErrorMessage").show();

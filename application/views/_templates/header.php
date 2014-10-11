@@ -26,9 +26,9 @@
 	<div data-content="admin" id="admin">
             Manager (<span data-binding="vorname"></span>) 
             <span id="adminNav">
-                <button class="adminButtonNavigation"><i class="fa fa-user fa-fw"></i> Mein Profil</a>
-				<button class="adminButtonNavigation"><i class="fa fa-users fa-fw"></i> Accountmanager</a>
-				<button class="adminButtonNavigation" onClick="endAdmin();"><i class="fa fa-power-off fa-fw"></i> Logout</a>
+                <button class="adminButtonNavigation"><i class="fa fa-user fa-fw"></i> Mein Profil</button>
+				<button class="adminButtonNavigation"><i class="fa fa-users fa-fw"></i> Accountmanager</button>
+				<button class="adminButtonNavigation" onClick="endAdmin();"><i class="fa fa-power-off fa-fw"></i> Logout</button>
             </span>
 	</div>
 	<div id="header">
