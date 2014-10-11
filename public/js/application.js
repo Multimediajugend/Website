@@ -5,14 +5,33 @@ $(function() {
 	$('[data-content="admin"]').hide();
 
 
-	//check for login
-	if(localStorage.getItem("token"))
+	//check if token is still valid
+	if(localStorage.getItem("token") && !sessionStorage.getItem("id"))
 	{
-		//TODO: CHECK IF TOKEN IS STILL VALID!
+		//CHECK IF TOKEN IS STILL VALID!
+		var dataUrl = "json/checktoken?token=" + localStorage.getItem("token");
 
-		//retrieve users meta data and save to sessionStorage
+		$.ajax({
+			type: "get",
+			url: dataUrl,
+			dataType: "json",
+			success: processCheckResponse,
+			error: function (o, c, m) { throw (m); }
+		});
 
-		startAdmin();
+		function processCheckResponse(data)
+		{
+			switch (data.type) {
+				case 'failure':
+					endAdmin();
+					break;
+				case 'success':
+					//save authentication reponse data:
+					setStorage(data.token, data.user);
+					startAdmin();
+					break;
+			}
+		}
 	}
 });
 
@@ -34,6 +53,7 @@ function login() {
 	if (loginBlocked)
 		return;
 
+	//block login function to prevent multiple 'login' clicks
 	loginBlocked = true;
 
 	var dataUrl = "json/login";
@@ -58,23 +78,16 @@ function login() {
 				$("#loginErrorMessage").hide();
 				$('#loginModal').trigger('closeModal');
 
-				//save login reponse data:
-				//token to persistent storage
-				localStorage.setItem("token", data.token);
-				//and all the other stuff to the session storage
-				sessionStorage.setItem("user", data.user.email);
-				sessionStorage.setItem("firstname", data.user.firstname);
-				sessionStorage.setItem("lastname", data.user.lastname);
-				sessionStorage.setItem("id", data.user.id);
-				sessionStorage.setItem("lastlogin", data.user.lastlogin);
-
+				//save login reponse data
+				setStorage(data.token, data.user);
+				//show admin panel etc...
 				startAdmin();
-
+				//scroll to admin-panel
 				$("html, body").animate({ scrollTop: 0 }, "slow");
 
 				break;
 		}
-
+		//release login-button
 		loginBlocked = false;
 	}
 }
@@ -85,7 +98,7 @@ function startAdmin() {
 }
 
 function endAdmin() {
-	getBindElement('admin', 'vorname').text("");
+	//getBindElement('admin', 'vorname').text("");
 	$('[data-content="admin"]').hide();
 	clearStorage();
 }
@@ -102,4 +115,15 @@ function clearStorage() {
 	sessionStorage.removeItem("lastname");
 	sessionStorage.removeItem("id");
 	sessionStorage.removeItem("lastlogin");
+}
+
+function setStorage(token, userdata) {
+	//token to persistent storage
+	localStorage.setItem("token", token);
+	//and all the other stuff to the session storage
+	sessionStorage.setItem("user", userdata.email);
+	sessionStorage.setItem("firstname", userdata.firstname);
+	sessionStorage.setItem("lastname", userdata.lastname);
+	sessionStorage.setItem("id", userdata.id);
+	sessionStorage.setItem("lastlogin", userdata.lastlogin);
 }
