@@ -412,9 +412,30 @@ div.right {
 
 #admin {
 	display:none;
-	background-color: #000;
+	background-color: #eee;
 	padding: 5px;
+	border: 1px solid #FA4920;
 }
+
+#adminNav {
+    float: right;
+}
+
+    #adminNav button {
+        display: inline-block;
+        font-size: 13px;
+        line-height: 20px;
+        padding: 3px 20px;
+        margin-left: 12px;
+        color: #777;
+        text-decoration: none;
+		border: none;
+    }
+
+        #adminNav button:hover {
+            background: #FA4920;
+            color: #fff;
+        }
 
 #loginErrorMessage {
 	display:none;

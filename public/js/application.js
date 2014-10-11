@@ -31,7 +31,7 @@ $(function () {
 			}
 		}
 	}
-	//start adminpnale if session storage is already set (navigated from one page to another)
+	//start adminpanel if session storage is already set (navigated from one page to another)
 	else if (sessionStorage.getItem("id")) {
 		startAdmin();
 	}

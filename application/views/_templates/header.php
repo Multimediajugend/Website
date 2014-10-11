@@ -23,7 +23,7 @@
 <body>
 <!-- header -->
 <div data-content="main" id="main">
-	<div data-content="admin" id="admin">
+	<div data-content="admin" id="admin" style="display:none;">
             Manager (<span data-binding="vorname"></span>) 
             <span id="adminNav">
                 <button class="adminButtonNavigation"><i class="fa fa-user fa-fw"></i> Mein Profil</button>
