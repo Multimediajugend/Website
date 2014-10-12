@@ -8,7 +8,7 @@
 		<div class="footerbox">
 			<a href="https://github.com/Multimediajugend/Website/issues" target="_blank"><i class="fa fa-warning fa-fw"></i> Fehler gefunden?</a><br />
 			<a href="<?php echo URL; ?>impressum"><i class="fa fa-info fa-fw"></i> Impressum</a><br />
-			<a href="" onClick="$('#loginModal').trigger('openModal'); return false;"><i class="fa fa-lock fa-fw"></i> Admin</a>
+			<a href="" onClick="clickAdminButton(); return false;"><i class="fa fa-lock fa-fw"></i> Admin</a>
 		</div>
 	</div>
 </div>

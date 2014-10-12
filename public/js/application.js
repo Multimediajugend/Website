@@ -31,8 +31,8 @@ $(function () {
 			}
 		}
 	}
-	//start adminpanel if session storage is already set (navigated from one page to another)
 	else if (sessionStorage.getItem("id")) {
+		//start adminpanel if session storage is already set (navigated from one page to another)
 		startAdmin();
 	}
 });
@@ -49,6 +49,17 @@ $(function () {
 		closeOnEscape: true
 	});
 });
+
+function clickAdminButton() {
+	//check: already logged in?
+	if (sessionStorage.getItem("id")) {
+		//scroll to admin-panel
+		$("html, body").animate({ scrollTop: 0 }, "slow");
+	}
+	else {
+		$('#loginModal').trigger('openModal');
+	}
+}
 
 function login() {
 
@@ -96,6 +107,8 @@ function login() {
 function startAdmin() {
 	getBindElement('admin', 'vorname').text(sessionStorage.getItem("firstname") + ' ' + sessionStorage.getItem("lastname"));
 	$('[data-content="admin"]').show();
+	if (sessionStorage.getItem("contenteditorActivated"))
+		startContenteditor();
 }
 
 function endAdmin() {
@@ -127,4 +140,24 @@ function setStorage(token, userdata) {
 	sessionStorage.setItem("lastname", userdata.lastname);
 	sessionStorage.setItem("id", userdata.id);
 	sessionStorage.setItem("lastlogin", userdata.lastlogin);
+}
+
+function toggleContenteditor() {
+	//if bereits aktiviert, dann deaktivieren:
+	if (sessionStorage.getItem("contenteditorActivated"))
+		endContenteditor();
+	else
+		startContenteditor();
+}
+
+function startContenteditor() {
+	sessionStorage.setItem("contenteditorActivated", "true");
+	$('#adminPanelButtonContents').addClass("active");
+	//editierbuttons usw einblenden....
+}
+
+function endContenteditor() {
+	sessionStorage.removeItem("contenteditorActivated");
+	$('#adminPanelButtonContents').removeClass("active");
+	//zeuch ausblenden....
 }

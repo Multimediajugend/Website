@@ -48,7 +48,7 @@
 		cursor: pointer;
 	}
 
-		button:hover {
+		button:hover, button.active {
 			color: #fff;
 			background: #FA4920;
 		}
@@ -434,7 +434,7 @@ div.right {
 		background-color: #f3f3f3;
 	}
 
-		#adminNav button:hover {
+		#adminNav button:hover, #adminNav > button.active {
 			color: #fff;
 			background: #FA4920;
 		}
