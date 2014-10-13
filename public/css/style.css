@@ -222,14 +222,48 @@
 }
 
 .left {
-	width: 630px;
 	margin-left: 0;
-	margin-right: 30px;
+	margin-right: 20px;
 }
 
 .right {
-	width: 300px;
 	margin-right: 0;
+}
+
+.oneThird {
+	width: 300px;
+}
+
+.twoThird {
+	width: 630px;
+}
+
+.oneQuarter {
+    width: 225px;
+}
+
+.threeQuarter {
+    width: 715px;
+}
+
+.oneHalf {
+    width: 470px;
+}
+
+.oneFifth {
+    width: 176px;
+}
+
+.twoFifth {
+    width: 372px;
+}
+
+.threeFifth {
+    width: 568px;
+}
+
+.fourFifth {
+    width: 764px;
 }
 
 .memberSingle {
@@ -281,14 +315,7 @@
 	height: 176px;
 }
 
-.left {
-	margin-left: 0;
-	margin-right: 20px;
-}
 
-div.right {
-	margin-right: 0;
-}
 
 .gallerySingle {
 	width: 100%;

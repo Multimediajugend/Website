@@ -1,6 +1,6 @@
 <div id="member">
 	<div class="memberWrapper">
-		<div class="memberGrid left">
+		<div class="memberGrid left twoThird">
 			<div class="pageTitle">Der Vorstand</div>
 			<div class="memberSingle">
 				<div class="memberImage">
@@ -53,7 +53,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="memberGrid right">
+		<div class="memberGrid right oneThird">
 			<div class="pageTitle">Mitglieder</div>
 			<ul class="memberList">
 				<li class="memberEntry">Ansgar Fischer</li>
