@@ -156,10 +156,12 @@ function startContenteditor() {
 	sessionStorage.setItem("contenteditorActivated", "true");
 	$('#adminPanelButtonContents').addClass("active");
 	//editierbuttons usw einblenden....
+    $('.editSection').show();
 }
 
 function endContenteditor() {
 	sessionStorage.removeItem("contenteditorActivated");
 	$('#adminPanelButtonContents').removeClass("active");
 	//zeuch ausblenden....
+    $('.editSection').hide();
 }

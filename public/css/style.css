@@ -469,6 +469,10 @@
 			background: #FA4920;
 		}
 
+.editSection {
+    display: none;
+}        
+        
 #loginErrorMessage {
 	display: none;
 	background-color: #FA4920;

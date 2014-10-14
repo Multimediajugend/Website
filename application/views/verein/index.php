@@ -38,13 +38,21 @@
 </div>
 <div id="news">
 	<div class="pageTitle">Aktuelles</div>
+    <div class="editSection">
+        <button><i class="fa fa-plus fa-fw"></i>  News erstellen</button>
+    </div>
 	<div class="newsSingle">
 		<div class="newsHeadline">Ein Wochenende der Medien</div>
 		<div class="newsTeaser">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</div>
 		<div class="newsMeta">
 			<a href="news.php?id=1">weiterlesen</a><br />
-			(vom <span class="newsDate">01.01.1970</span>)
+			<i>noch nicht veröffentlicht</i>
 		</div>
+        <div class="editSection">
+            <button><i class="fa fa-edit fa-fw"></i> bearbeiten</button>
+            <button><i class="fa fa-remove fa-fw"></i> löschen</button>
+            <button><i class="fa fa-eye-slash fa-fw"></i> anzeigen</button>
+        </div>
 	</div>
 	<div class="newsSingle">
 		<div class="newsHeadline">Ein Wochenende der Medien</div>
@@ -53,5 +61,10 @@
 			<a href="news.php?id=1">weiterlesen</a><br />
 			(vom <span class="newsDate">01.01.1970</span>)
 		</div>
+        <div class="editSection">
+            <button><i class="fa fa-edit fa-fw"></i> bearbeiten</button>
+            <button><i class="fa fa-remove fa-fw"></i> löschen</button>
+            <button><i class="fa fa-eye-slash fa-fw"></i> verbergen</button>
+        </div>
 	</div>
 </div>
