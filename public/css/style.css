@@ -446,6 +446,7 @@
 	padding: 0px 5px;
     width: 948px;
 	border: 1px solid #FA4920;
+    z-index: 1000;
 }
 
 #adminNav {

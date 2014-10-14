@@ -19,6 +19,9 @@ class Verein extends Controller
         // load views. within the views we can echo out $songs and $amount_of_songs easily
 		$title = 'Verein';
 		$active = 'verein';
+        
+        $newsTeaser_model = $this->loadModel('NewsTeaserModel');
+        $lastNews = $newsTeaser_model->getLastNews(true);
 		
         require 'application/views/_templates/header.php';
         require 'application/views/verein/index.php';

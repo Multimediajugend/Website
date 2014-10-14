@@ -39,14 +39,25 @@
 <div id="news">
 	<div class="pageTitle">Aktuelles</div>
     <div class="editSection">
-        <button><i class="fa fa-plus fa-fw"></i>  News erstellen</button>
+        <button><i class="fa fa-plus fa-fw"></i> News erstellen</button>
+        <button><i class="fa fa-download fa-fw"></i> Zeige nicht veröffentlichte News</button>
     </div>
-	<div class="newsSingle">
-		<div class="newsHeadline">Ein Wochenende der Medien</div>
-		<div class="newsTeaser">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</div>
+    
+    <?php foreach ($lastNews as $news) { ?>
+    <div class="newsSingle">
+		<div class="newsHeadline"><?php if(isset($news->header)) echo $news->header; ?></div>
+		<div class="newsTeaser"><?php if(isset($news->text)) echo $news->text; ?></div>
 		<div class="newsMeta">
-			<a href="news.php?id=1">weiterlesen</a><br />
-			<i>noch nicht veröffentlicht</i>
+            <?php if(isset($news->newsid) && $news->newsid != null) { ?>
+                <a href="news.php?id=<?php echo $news->newsid; ?>">weiterlesen</a><br />
+            <?php } ?>
+            <?php if(isset($news->published)) { 
+                      if($news->published == null) {
+                          echo '<i>noch nicht veröffentlicht</i>';
+                      } else {
+                          echo '(vom <span class="newsDate">'.$news->published.'</span>)';
+                      }
+                  } ?>
 		</div>
         <div class="editSection">
             <button><i class="fa fa-edit fa-fw"></i> bearbeiten</button>
@@ -54,17 +65,5 @@
             <button><i class="fa fa-eye-slash fa-fw"></i> anzeigen</button>
         </div>
 	</div>
-	<div class="newsSingle">
-		<div class="newsHeadline">Ein Wochenende der Medien</div>
-		<div class="newsTeaser">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</div>
-		<div class="newsMeta">
-			<a href="news.php?id=1">weiterlesen</a><br />
-			(vom <span class="newsDate">01.01.1970</span>)
-		</div>
-        <div class="editSection">
-            <button><i class="fa fa-edit fa-fw"></i> bearbeiten</button>
-            <button><i class="fa fa-remove fa-fw"></i> löschen</button>
-            <button><i class="fa fa-eye-slash fa-fw"></i> verbergen</button>
-        </div>
-	</div>
+    <?php } ?>
 </div>
