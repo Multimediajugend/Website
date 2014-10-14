@@ -18,6 +18,9 @@
 	<!-- easyModal.js (flaviusmatis) -->
 	<script src="<?php echo URL; ?>public/js/jquery.easyModal.js"></script>
     <!-- our JavaScript -->
+    <script>
+        const _url = "<?php echo URL; ?>"; 
+    </script>
     <script src="<?php echo URL; ?>public/js/application.js"></script>
 </head>
 <body>

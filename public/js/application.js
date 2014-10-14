@@ -69,7 +69,7 @@ function login() {
 	//block login function to prevent multiple 'login' clicks
 	loginBlocked = true;
 
-	var dataUrl = "/Website/json/login";
+	var dataUrl = _url + "json/login";
 	var loginStuff = { email: $("#loginEmail").val(), password: $("#loginPassword").val() };
 
 	$.ajax({
