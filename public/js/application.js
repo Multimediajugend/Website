@@ -116,6 +116,7 @@ function endAdmin() {
 	//getBindElement('admin', 'vorname').text("");
 	$('[data-content="admin"]').hide();
     $('#header').css( "padding-top", "" );
+    endContenteditor();
 	clearStorage();
 }
 
