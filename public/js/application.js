@@ -69,7 +69,7 @@ function login() {
 	//block login function to prevent multiple 'login' clicks
 	loginBlocked = true;
 
-	var dataUrl = "json/login";
+	var dataUrl = "/Website/json/login";
 	var loginStuff = { email: $("#loginEmail").val(), password: $("#loginPassword").val() };
 
 	$.ajax({
@@ -109,11 +109,13 @@ function startAdmin() {
 	$('[data-content="admin"]').show();
 	if (sessionStorage.getItem("contenteditorActivated"))
 		startContenteditor();
+    $('#header').css( "padding-top", "52px" );
 }
 
 function endAdmin() {
 	//getBindElement('admin', 'vorname').text("");
 	$('[data-content="admin"]').hide();
+    $('#header').css( "padding-top", "" );
 	clearStorage();
 }
 
