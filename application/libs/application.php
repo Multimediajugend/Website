@@ -56,10 +56,10 @@ class Application
                 $this->url_controller->index();
             }
         } else {
-            // invalid URL, so simply show start/index
-            require './application/controller/start.php';
-            $start = new Start();
-            $start->index();
+            // invalid URL, so simply show verein/index
+            require './application/controller/verein.php';
+            $verein = new Verein();
+            $verein->index();
         }
     }
 

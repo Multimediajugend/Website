@@ -8,7 +8,7 @@
  * This is really weird behaviour, but documented here: http://php.net/manual/en/language.oop5.decon.php
  *
  */
-class Start extends Controller
+class Verein extends Controller
 {
     /**
      * PAGE: index
@@ -17,11 +17,11 @@ class Start extends Controller
     public function index()
     {
         // load views. within the views we can echo out $songs and $amount_of_songs easily
-		$title = 'Start';
-		$active = 'start';
+		$title = 'Verein';
+		$active = 'verein';
 		
         require 'application/views/_templates/header.php';
-        require 'application/views/start/index.php';
+        require 'application/views/verein/index.php';
         require 'application/views/_templates/footer.php';
     }
 	
@@ -30,7 +30,7 @@ class Start extends Controller
         // load views. within the views we can echo out $songs and $amount_of_songs easily
 		$title = 'Kooperation';
         require 'application/views/_templates/header.php';
-        require 'application/views/start/kooperation.php';
+        require 'application/views/verein/kooperation.php';
         require 'application/views/_templates/footer.php';
 	}
 		
@@ -39,7 +39,7 @@ class Start extends Controller
         // load views. within the views we can echo out $songs and $amount_of_songs easily
 		$title = 'Technik';
         require 'application/views/_templates/header.php';
-        require 'application/views/start/technik.php';
+        require 'application/views/verein/technik.php';
         require 'application/views/_templates/footer.php';
 	}
 		
@@ -48,7 +48,7 @@ class Start extends Controller
         // load views. within the views we can echo out $songs and $amount_of_songs easily
 		$title = 'Musik';
         require 'application/views/_templates/header.php';
-        require 'application/views/start/musik.php';
+        require 'application/views/verein/musik.php';
         require 'application/views/_templates/footer.php';
 	}
 		
@@ -57,7 +57,7 @@ class Start extends Controller
         // load views. within the views we can echo out $songs and $amount_of_songs easily
 		$title = 'Sport';
         require 'application/views/_templates/header.php';
-        require 'application/views/start/sport.php';
+        require 'application/views/verein/sport.php';
         require 'application/views/_templates/footer.php';
 	}
 }
