@@ -28,7 +28,7 @@ class NewsTeaserModel
         if($published) {
             $sql .= " WHERE published IS NOT NULL
                           AND published < CURRENT_TIMESTAMP()
-                      ORDER BY published DESC LIMIT 2";
+                      ORDER BY published DESC LIMIT ".NEWS_COUNT;
         } else {
             $sql .= " WHERE published IS NULL
                           OR published > CURRENT_TIMESTAMP()

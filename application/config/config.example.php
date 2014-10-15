@@ -27,6 +27,12 @@ define('URL', 'http://example.com/Website/');
 define('SALT', '!§$%&1n467');
  
 /**
+ * Configuration for: Number of shown News
+ * on the main-page
+ */
+define('NEWS_COUNT', 3);
+ 
+/**
  * Configuration for: Database
  * This is the place where you define your database credentials, database type etc.
  */

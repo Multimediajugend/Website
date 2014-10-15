@@ -113,6 +113,12 @@
 	padding: 10px 0px;
 }
 
+.newsImage {
+    float: left;
+    margin-right: 15px;
+    height: 150px;
+}
+
 .color-1 {
 	color: #dc5130;
 }

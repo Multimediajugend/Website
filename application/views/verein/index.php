@@ -46,19 +46,23 @@
     <?php foreach ($lastNews as $news) { ?>
     <div class="newsSingle">
 		<div class="newsHeadline"><?php if(isset($news->header)) echo $news->header; ?></div>
+        <?php if(isset($news->image) && $news->image!=null) { ?>
+            <img class="newsImage" src="<?php echo URL.$news->image; ?>">
+        <?php } ?>
 		<div class="newsTeaser"><?php if(isset($news->text)) echo $news->text; ?></div>
 		<div class="newsMeta">
             <?php if(isset($news->newsid) && $news->newsid != null) { ?>
                 <a href="news.php?id=<?php echo $news->newsid; ?>">weiterlesen</a><br />
-            <?php } ?>
-            <?php if(isset($news->published)) { 
+            <?php } 
+                  if(isset($news->published)) { 
                       if($news->published == null) {
                           echo '<i>noch nicht veröffentlicht</i>';
                       } else {
-                          echo '(vom <span class="newsDate">'.$news->published.'</span>)';
+                          echo '(vom <span class="newsDate">'.date("d.m.Y - H:i:s",strtotime($news->published)).'</span>)';
                       }
                   } ?>
 		</div>
+        <div style="clear:left" />
         <div class="editSection">
             <button><i class="fa fa-edit fa-fw"></i> bearbeiten</button>
             <button><i class="fa fa-remove fa-fw"></i> löschen</button>
