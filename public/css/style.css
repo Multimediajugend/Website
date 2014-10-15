@@ -508,6 +508,10 @@ button:focus {
 
 .editSection {
     display: none;
+    border: 1px dotted #FA4920;
+    padding: 5px;
+    margin: 5px 0px 20px 0px;
+    background-color: #e3e3e3;
 }        
         
 #loginErrorMessage {
