@@ -68,7 +68,7 @@
             <button class="newsEdit"><i class="fa fa-edit fa-fw"></i> Bearbeiten</button>
             <button><i class="fa fa-remove fa-fw"></i> Löschen</button><br />
             Aktuelle Version: <i>keine veröffentlicht</i><br />
-            Version wählen: 
+            Version anzeigen: 
             <select id="newsVersion">
                <option value="5">5 - 15.10.14 - 10:20 (123)</option>
                <option value="4">4 - 15.10.14 - 10:19</option>
@@ -76,7 +76,6 @@
                <option value="2">2 - 15.10.14 - 10:15</option>
                <option value="1">1 - 15.10.14 - 10:09</option>
              </select>
-            <button><i class="fa fa-eye fa-fw"></i> Anzeigen</button>
             <button><i class="fa fa-upload fa-fw"></i> Version veröffentlichen</button>
         </div>
 	</div>

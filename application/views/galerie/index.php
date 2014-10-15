@@ -1,6 +1,9 @@
 <div id="gallery">
 	<div class="pageTitle">Galerie</div>
-	<div class="galleryWrapper">
+    <div class="editSection">
+        <button id="addGallery"><i class="fa fa-plus fa-fw"></i> Galerie hinzufügen</button>
+    </div>
+    <div class="galleryWrapper">
 		<div class="galleryGrid left">
 			<a href="<?php echo URL; ?>galerie/untergalerie/radtour_2014_2">
 				<div class="gallerySingle">
@@ -13,7 +16,11 @@
 					</div>
 				</div>
 			</a>
-			 <a href="<?php echo URL; ?>galerie/untergalerie/chemnitz_zockt">
+            <div class="editSection">
+                <button><i class="fa fa-edit fa-fw"></i> Bearbeiten</button>
+                <button><i class="fa fa-remove fa-fw"></i> Löschen</button>
+            </div>
+			<a href="<?php echo URL; ?>galerie/untergalerie/chemnitz_zockt">
 				<div class="gallerySingle">
 					<div class="galleryImage">
 						<img src="<?php echo URL; ?>public/img/gallery/preview3.jpg" /></div>
@@ -24,6 +31,10 @@
 					</div>
 				</div>
 			</a>
+            <div class="editSection">
+                <button><i class="fa fa-edit fa-fw"></i> Bearbeiten</button>
+                <button><i class="fa fa-remove fa-fw"></i> Löschen</button>
+            </div>
 			<a href="<?php echo URL; ?>galerie/untergalerie/radtour_2013">
 				<div class="gallerySingle">
 					<div class="galleryImage">
@@ -35,6 +46,10 @@
 					</div>
 				</div>
 			</a>
+            <div class="editSection">
+                <button><i class="fa fa-edit fa-fw"></i> Bearbeiten</button>
+                <button><i class="fa fa-remove fa-fw"></i> Löschen</button>
+            </div>
 		</div>
 		<div class="galleryGrid right">
 			<a href="<?php echo URL; ?>galerie/untergalerie/radtour_2014_1">
@@ -48,7 +63,11 @@
 					</div>
 				</div>
 			</a>
-			<a href="<?php echo URL; ?>galerie/untergalerie/clanwars_x">
+            <div class="editSection">
+                <button><i class="fa fa-edit fa-fw"></i> Bearbeiten</button>
+                <button><i class="fa fa-remove fa-fw"></i> Löschen</button>
+            </div>
+            <a href="<?php echo URL; ?>galerie/untergalerie/clanwars_x">
 				<div class="gallerySingle">
 					<div class="galleryImage">
 						<img src="<?php echo URL; ?>public/img/gallery/preview4.jpg" /></div>
@@ -59,6 +78,10 @@
 					</div>
 				</div>
 			</a>
+            <div class="editSection">
+                <button><i class="fa fa-edit fa-fw"></i> Bearbeiten</button>
+                <button><i class="fa fa-remove fa-fw"></i> Löschen</button>
+            </div>
 		</div>
 	</div>
 </div>

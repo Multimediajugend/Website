@@ -2,6 +2,9 @@
 	<div class="memberWrapper">
 		<div class="memberGrid left twoThird">
 			<div class="pageTitle">Der Vorstand</div>
+            <div class="editSection">
+                <button><i class="fa fa-plus fa-fw"></i> Hinzufügen</button>
+            </div>
 			<div class="memberSingle">
 				<div class="memberImage">
 					<img src="<?php echo URL; ?>public/img/member/member1.jpg" />
@@ -12,6 +15,10 @@
 					<div class="memberDescription">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</div>
 				</div>
 			</div>
+            <div class="editSection">
+                <button><i class="fa fa-edit fa-fw"></i> Bearbeiten</button>
+                <button><i class="fa fa-remove fa-fw"></i> Löschen</button>
+            </div>
 			<div class="memberSingle">
 				<div class="memberImage">
 					<img src="<?php echo URL; ?>public/img/member/member2.jpg" />
@@ -22,6 +29,10 @@
 					<div class="memberDescription">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan.</div>
 				</div>
 			</div>
+            <div class="editSection">
+                <button><i class="fa fa-edit fa-fw"></i> Bearbeiten</button>
+                <button><i class="fa fa-remove fa-fw"></i> Löschen</button>
+            </div>
 			<div class="memberSingle">
 				<div class="memberImage">
 					<img src="<?php echo URL; ?>public/img/member/member3.jpg" />
@@ -32,6 +43,10 @@
 					<div class="memberDescription">Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</div>
 				</div>
 			</div>
+            <div class="editSection">
+                <button><i class="fa fa-edit fa-fw"></i> Bearbeiten</button>
+                <button><i class="fa fa-remove fa-fw"></i> Löschen</button>
+            </div>
 			<div class="memberSingle">
 				<div class="memberImage">
 					<img src="<?php echo URL; ?>public/img/member/member4.jpg" />
@@ -42,6 +57,10 @@
 					<div class="memberDescription">Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</div>
 				</div>
 			</div>
+            <div class="editSection">
+                <button><i class="fa fa-edit fa-fw"></i> Bearbeiten</button>
+                <button><i class="fa fa-remove fa-fw"></i> Löschen</button>
+            </div>
 			<div class="memberSingle">
 				<div class="memberImage">
 					<img src="<?php echo URL; ?>public/img/member/member5.jpg" />
@@ -52,9 +71,16 @@
 					<div class="memberDescription">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet.</div>
 				</div>
 			</div>
+            <div class="editSection">
+                <button><i class="fa fa-edit fa-fw"></i> Bearbeiten</button>
+                <button><i class="fa fa-remove fa-fw"></i> Löschen</button>
+            </div>
 		</div>
 		<div class="memberGrid right oneThird">
 			<div class="pageTitle">Mitglieder</div>
+            <div class="editSection">
+                <button><i class="fa fa-edit fa-fw"></i> Verwalten</button>
+            </div>
 			<ul class="memberList">
 				<li class="memberEntry">Ansgar Fischer</li>
 				<li class="memberEntry">David Fritsche</li>
