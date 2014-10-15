@@ -371,59 +371,85 @@
 }
 
 #loginModal {
-	left: 50%;
-	top: 50%;
 	margin-top: -135px;
 	margin-left: -200px;
+	width: 400px;
+}
+		#loginModal  .txt input {
+			width: 220px;
+			height: 16px;
+		}
+
+#newsModal {
+	margin-top: -235px;
+	margin-left: -400px;
+	width: 800px;
+}
+		#newsModal  .txt input {
+			width: 470px;
+			height: 16px;
+		}
+
+		#newsModal  .txt textarea {
+			width: 620px;
+			height: 280px;
+            resize: vertical;
+		}
+
+.modal {
+	left: 50%;
+	top: 50%;
 	display: block;
 	position: fixed;
 	z-index: 6;
-	width: 400px;
 	background: #FFF;
 	box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
 }
 
-	#loginModal .modalHeader {
+	.modal .modalHeader {
 		background: #DDD;
 		border-bottom: 1px solid #CCCCCC;
 		padding: 18px 18px 14px;
 	}
 
-		#loginModal .modalHeader h3 {
+		.modal  .modalHeader h3 {
 			margin: 0;
 			padding: 0;
 			text-shadow: 0 1px 0 rgba(255,255,255,0.5);
 			font-size: 18px;
 		}
 
-	#loginModal form {
+	.modal  form {
 		padding: 10px 0;
 	}
 
-	#loginModal .txt {
+	.modal  .txt {
 		padding: 10px 20px;
 	}
 
-		#loginModal .txt input {
-			width: 220px;
-			height: 16px;
+		.modal  .txt input {
 			padding: 5px;
 			border: 1px solid #CCC;
 		}
 
-		#loginModal .txt label {
+		.modal  .txt textarea {
+			padding: 5px;
+			border: 1px solid #CCC;
+		}
+
+		.modal  .txt label {
 			float: left;
 			width: 120px;
 			line-height: 28px;
 			font-size: 13px;
 		}
 
-	#loginModal .btn {
+	.modal  .btn {
 		padding: 10px 20px 10px 140px;
 		margin-bottom: 25px;
 	}
 
-		#loginModal .btn button {
+		.modal  .btn button {
 			float: left;
 			padding: 0 20px;
 			line-height: 28px;
@@ -437,7 +463,7 @@
 			border: none;
 		}
 
-			#loginModal .btn button.cancel {
+			.modal  .btn button.cancel {
 				background: #DDDDDD;
 				box-shadow: none;
 				color: #333;
@@ -455,6 +481,10 @@
     z-index: 1000;
 }
 
+button:focus {
+    outline:none;
+}
+
 #adminNav {
 	float: right;
 }
@@ -464,7 +494,7 @@
 		font-size: 13px;
 		line-height: 20px;
 		padding: 3px 20px;
-		margin-left: 12px;
+        margin: 0px 0px 0px 12px;
 		color: #777;
 		text-decoration: none;
 		border: none;

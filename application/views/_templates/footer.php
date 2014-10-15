@@ -13,7 +13,7 @@
 	</div>
 </div>
 <div data-content="login">
-	<div id="loginModal">
+	<div id="loginModal" class="modal">
 		<div class="modalHeader">
 			<h3>Administration</h3>
 		</div>

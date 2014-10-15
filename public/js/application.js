@@ -35,12 +35,7 @@ $(function () {
 		//start adminpanel if session storage is already set (navigated from one page to another)
 		startAdmin();
 	}
-});
 
-var loginBlocked = false;
-
-// initialize login form modal:
-$(function () {
 	$("#loginModal").easyModal({
 		autoOpen: false,
 		overlayOpacity: 0.5,
@@ -48,7 +43,36 @@ $(function () {
 		overlayClose: false,
 		closeOnEscape: true
 	});
+    
+    $("#newsModal").easyModal({
+		autoOpen: false,
+		overlayOpacity: 0.5,
+		overlayColor: "#333",
+		overlayClose: false,
+		closeOnEscape: true
+	});
+    
+    $('#addNews').click(function() {
+        showNewsModal('', '', '', '');
+    });
+    
+    $('.newsEdit').click(function(e) {
+        var news = $(this).closest(".newsSingle")[0];
+        var id = $(news).find('.newsId').val();
+        var headline = $(news).find('.newsHeadline').text();
+        var text = $(news).find('.newsTeaser').text();
+        var image = '';
+        if($(news).find('.newsImage').length > 0)
+        {
+            image = $(news).find('.newsImage').attr('src');
+            image = image.replace(_url, '');
+        }
+        
+        showNewsModal(id, image, headline, text);
+    });
 });
+
+var loginBlocked = false;
 
 function clickAdminButton() {
 	//check: already logged in?
@@ -165,4 +189,31 @@ function endContenteditor() {
 	$('#adminPanelButtonContents').removeClass("active");
 	//zeuch ausblenden....
     $('.editSection').hide();
+}
+
+function showNewsModal(id, image, headline, text) {
+    $('#newsModalTeaserId').val(id);
+    $('#newsModalImage').val(image);
+    $('#newsModalHeadline').val(headline);
+    $('#newsModalText').val(text);
+    
+    $('#newsModal').trigger('openModal');
+}
+
+function saveNews() {
+    var id = parseInt($('#newsModalTeaserId').val());
+    var headline = $('#newsModalHeadline').val();
+    var image = $('#newsModalImage').val();
+    var text = $('#newsModalText').val();
+    if(isNaN(id))
+    {
+        //TODO: add News
+        console.log('add news');
+    }
+    else
+    {
+        //TODO: modify News
+        console.log('modify news:' + id);
+    }
+    $('#newsModal').trigger('closeModal');
 }

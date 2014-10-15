@@ -39,12 +39,13 @@
 <div id="news">
 	<div class="pageTitle">Aktuelles</div>
     <div class="editSection">
-        <button><i class="fa fa-plus fa-fw"></i> News erstellen</button>
-        <button><i class="fa fa-download fa-fw"></i> Zeige nicht veröffentlichte News</button>
+        <button id="addNews"><i class="fa fa-plus fa-fw"></i> News erstellen</button>
+        <button id="showUnpublished"><i class="fa fa-download fa-fw"></i> Zeige nicht veröffentlichte News</button>
     </div>
     
     <?php foreach ($lastNews as $news) { ?>
     <div class="newsSingle">
+        <input type="hidden" class="newsId" value="<?php echo $news->id; ?>" />
 		<div class="newsHeadline"><?php if(isset($news->header)) echo $news->header; ?></div>
         <?php if(isset($news->image) && $news->image!=null) { ?>
             <img class="newsImage" src="<?php echo URL.$news->image; ?>">
@@ -62,12 +63,38 @@
                       }
                   } ?>
 		</div>
-        <div style="clear:left" />
+        <div style="clear:left"></div>
         <div class="editSection">
-            <button><i class="fa fa-edit fa-fw"></i> bearbeiten</button>
+            <button class="newsEdit"><i class="fa fa-edit fa-fw"></i> bearbeiten</button>
             <button><i class="fa fa-remove fa-fw"></i> löschen</button>
             <button><i class="fa fa-eye-slash fa-fw"></i> anzeigen</button>
         </div>
 	</div>
     <?php } ?>
+    <div id="newsModal" class="modal">
+        <div class="modalHeader">
+            <h3>Newseditor</h3>
+        </div>
+        <form name="newsModalForm" onSubmit="saveNews()">
+            <input id="newsModalTeaserId" type="hidden" />
+            <div class="txt">
+                <label for="newsModalHeadline">&Uuml;berschrift</label>
+                <input id="newsModalHeadline" type="text" required />
+            </div>
+            <div class="txt">
+                <label for="newsModalImage">Bild</label>
+                <input id="newsModalImage" type="text" />
+                <button onclick="return false;"><i class="fa fa-image fa-fw"></i> Bild auswählen</button>
+            </div>
+            <div class="txt">
+                <label for="newsModalText">Text</label>
+                <textarea id="newsModalText" type="text" cols="55" rows="20" required ></textarea>
+            </div>
+            <div class="btn clearfix">
+				<button type="submit" onClick="saveNews(); return false;"><i class="fa fa-save fa-fw"></i> Speichern</button>
+				<button class="close cancel"><i class="fa fa-remove fa-fw"></i> Abbruch</button>
+			</div>
+
+        </form>
+    </div>
 </div>
