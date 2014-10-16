@@ -51,4 +51,36 @@ class Json extends Controller
         require 'application/views/json/getNews.php';
         require 'application/views/_templates/footer.json.php';
     }
+    
+    public function unpublishNews($id)
+    {
+        $newsTeaser_model = $this->loadModel('NewsTeaserModel');
+        $newsTeaser_model->unpublishNews($id);
+        
+        $ver = $newsTeaser_model->getNewsVersions($id)[0]->version;
+		
+        require 'application/views/_templates/header.json.php';
+        $output = array(
+            "type" => 'success',
+            "id" => $id,
+            "version" => $ver
+		);        
+        require 'application/views/_templates/footer.json.php';
+    }
+    
+    public function publishNews($id, $date)
+    {
+        $newsTeaser_model = $this->loadModel('NewsTeaserModel');
+        $newsTeaser_model->publishNews($id, urlencode($date));
+        
+        $ver = $newsTeaser_model->getNewsVersions($id)[0]->version;
+		
+        require 'application/views/_templates/header.json.php';
+        $output = array(
+            "type" => 'success',
+            "id" => $id,
+            "version" => $ver
+		);        
+        require 'application/views/_templates/footer.json.php';
+    }
 }

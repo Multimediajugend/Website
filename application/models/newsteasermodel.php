@@ -82,6 +82,43 @@ class NewsTeaserModel
         
         return $query->fetchAll();
     }
+    
+    /**
+     * Unpublish news
+     * @param string $id NewsTeaserID
+     */
+    public function unpublishNews($id)
+    {
+        $sql = "UPDATE newsteaser
+                SET published = NULL
+                WHERE newsteaserid = :id;";
+        $query = $this->db->prepare($sql);
+        $query->execute(array(':id' => $id));    
+    }
+
+    /**
+     * Publish news
+     * @param string $id NewsTeaserID
+     * @param string $date Date
+     */
+    public function publishNews($id, $date)
+    {
+        $parsed = date_parse_from_format("d.m.Y - H:i", $date);
+        $phpdate = mktime(
+                $parsed['hour'], 
+                $parsed['minute'], 
+                $parsed['second'], 
+                $parsed['month'], 
+                $parsed['day'], 
+                $parsed['year']
+            );        
+        $mysqldate = date('Y-m-d H:i:s', $phpdate);
+        $sql = "UPDATE newsteaser
+                SET published = :date
+                WHERE newsteaserid = :id;";
+        $query = $this->db->prepare($sql);
+        $query->execute(array(':id' => $id, ':date' => $mysqldate));    
+    }
 
     /**
      * Add a newsTeaser to database

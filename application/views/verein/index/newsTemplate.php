@@ -32,12 +32,12 @@
             ?>
         </select><br />
         <span class="newsHide"<?php if(!$published) echo ' style="display: none;"' ?>>
-            <button><i class="fa fa-eye-slash fa-fw"></i> News verbergen</button>
+            <button class="newsUnpublish"><i class="fa fa-eye-slash fa-fw"></i> News verbergen</button>
         </span>
         <span class="newsShow"<?php if($published) echo ' style="display: none;"' ?>>
             News am
-            <input type="text" class="newsDateTimePicker" />
-            <button><i class="fa fa-upload fa-fw"></i> ver&ouml;ffentlichen</button>
+            <input type="text" class="newsDateTimePicker" value="<?php echo date("d.m.Y - H:i"); ?>" />
+            <button class="newsPublish"><i class="fa fa-upload fa-fw"></i> ver&ouml;ffentlichen</button>
         </span>
     </div>
 </div>

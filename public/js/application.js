@@ -63,6 +63,38 @@ $(function () {
         dayOfWeekStart: 1
     });
     
+    $('.newsUnpublish').click(function() {
+        var news = $(this).closest(".newsSingle")[0];
+        var id = news.id.substr(4);
+        
+        var dataUrl = "json/unpublishnews/"+id;
+
+		$.ajax({
+			type: "get",
+			url: dataUrl,
+			dataType: "json",
+			success: unpublishResponse,
+			error: function (o, c, m) { throw (m); }
+		});
+    });
+    
+    $('.newsPublish').click(function() {
+        var news = $(this).closest(".newsSingle")[0];
+        var id = news.id.substr(4);
+        
+        var date = $(news).find('.newsDateTimePicker').val();
+        
+        var dataUrl = "json/publishnews/"+id+"/"+date;
+
+		$.ajax({
+			type: "get",
+			url: dataUrl,
+			dataType: "json",
+			success: publishResponse,
+			error: function (o, c, m) { throw (m); }
+		});
+    });
+    
     $('.newsEdit').click(function(e) {
         var news = $(this).closest(".newsSingle")[0];
         var id = news.id.substr(4);
@@ -83,15 +115,7 @@ $(function () {
         var id = news.id.substr(4);
         var ver = $(this).find('option:selected').val();
         
-        var dataUrl = "json/getnews/" + id + "/" + ver;
-
-		$.ajax({
-			type: "get",
-			url: dataUrl,
-			dataType: "json",
-			success: getNews,
-			error: function (o, c, m) { throw (m); }
-		});
+        getNews(id, ver);
     });
 });
 
@@ -241,7 +265,19 @@ function saveNews() {
     $('#newsModal').trigger('closeModal');
 }
 
-function getNews(data) {
+function getNews(id, ver) {
+    var dataUrl = "json/getnews/" + id + "/" + ver;
+
+    $.ajax({
+        type: "get",
+        url: dataUrl,
+        dataType: "json",
+        success: getNewsResponse,
+        error: function (o, c, m) { throw (m); }
+    });
+}
+
+function getNewsResponse(data) {
     if(data.type != 'success')
         return;
 
@@ -262,6 +298,27 @@ function getNews(data) {
     } else {
         // TODO: create news
     }
+}
+
+function publishResponse(data) {
+    if(data.type != 'success')
+        return;
+    
+    getNews(data.id, data.version);
+}
+
+function unpublishResponse(data) {
+    if(data.type != 'success')
+        return;
+    
+    getNews(data.id, data.version);
+}
+
+function publishResponse(data) {
+    if(data.type != 'success')
+        return;
+    
+    getNews(data.id, data.version);
 }
 
 function updateNews(id, headline, image, text, newsid, published, curVersion, newsVersions, showVersion)
@@ -300,7 +357,6 @@ function updateNews(id, headline, image, text, newsid, published, curVersion, ne
         $(news).find('.newsUnpublished').show();
 
         $(news).find('.newsHide').hide();
-        $(news).find('.newsDateTimePicker').val(dateToStr(new Date(Date.now())));
         $(news).find('.newsShow').show();
     }
     
@@ -316,7 +372,6 @@ function updateNews(id, headline, image, text, newsid, published, curVersion, ne
         option += '>'+ver.version+' - '+ver.modified+' ('+ver.userid+')</option>';
         $(news).find(".newsVersion").append(option)
     }
-
 }
 
 function dateToStr(d) {
