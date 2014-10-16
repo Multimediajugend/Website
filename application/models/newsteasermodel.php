@@ -43,6 +43,29 @@ class NewsTeaserModel
         // $options = array(PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC ...
         return $query->fetchAll();
     }
+    /**
+     * Get last news from database (limit by constant NEWS_COUNT)
+     * @param bool $published Published
+     */
+    public function getSpecificNews($id, $version)
+    {
+        $sql = "SELECT nt.newsteaserid AS id, nt.currentversion AS version, nt.userid AS userid, nt.published AS published, nt.newsid AS newsid, ver.header AS header, ver.image AS image, ver.text AS text, ver.modified AS modified
+                FROM newsteaser as nt
+                JOIN (SELECT newsteaserid as id, version as v, header, image, text, modified
+                      FROM newsteaserversions
+                      WHERE newsteaserid=:id
+                          AND version=:ver
+                      ) as ver
+                ON nt.newsteaserid = ver.id";
+        $query = $this->db->prepare($sql);
+        $query->execute(array(':id' => $id, ':ver' => $version));
+
+        // fetchAll() is the PDO method that gets all result rows, here in object-style because we defined this in
+        // libs/controller.php! If you prefer to get an associative array as the result, then do
+        // $query->fetchAll(PDO::FETCH_ASSOC); or change libs/controller.php's PDO options to
+        // $options = array(PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC ...
+        return $query->fetchAll();
+    }
     
     /**
      * Get all version-numbers for specified newsteaser

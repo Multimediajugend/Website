@@ -41,4 +41,14 @@ class Json extends Controller
         require 'application/views/json/checktoken.php';
         require 'application/views/_templates/footer.json.php';
     }
+    
+    public function getNews($id, $version)
+    {
+        $newsTeaser_model = $this->loadModel('NewsTeaserModel');
+        $news = $newsTeaser_model->getSpecificNews($id, $version);
+		
+        require 'application/views/_templates/header.json.php';
+        require 'application/views/json/getNews.php';
+        require 'application/views/_templates/footer.json.php';
+    }
 }

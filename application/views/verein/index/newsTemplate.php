@@ -1,6 +1,6 @@
 <div class="newsSingle">
-    <input type="hidden" class="newsId" value="<?php echo $news->id; ?>" />
-    <div class="newsHeadline"><?php if(isset($news->header)) echo $news->header; ?></div>
+    <input type="hidden" class="newsId" value="<?php echo $id; ?>" />
+    <div class="newsHeadline"><?php echo $headline; ?></div>
         <?php if($image != null) { ?>
             <img class="newsImage" src="<?php echo URL.$image; ?>">
         <?php } ?>
