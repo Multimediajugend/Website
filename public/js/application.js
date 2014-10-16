@@ -58,7 +58,7 @@ $(function () {
     
     $('.newsEdit').click(function(e) {
         var news = $(this).closest(".newsSingle")[0];
-        var id = $(news).find('.newsId').val();
+        var id = news.id.substr(4);
         var headline = $(news).find('.newsHeadline').text();
         var text = $(news).find('.newsTeaser').text();
         var image = '';
@@ -69,6 +69,22 @@ $(function () {
         }
         
         showNewsModal(id, image, headline, text);
+    });
+    
+    $('.newsVersion').change(function() {
+        var news = $(this).closest(".newsSingle")[0];
+        var id = news.id.substr(4);
+        var ver = $(this).find('option:selected').val();
+        
+        var dataUrl = "json/getnews/" + id + "/" + ver;
+
+		$.ajax({
+			type: "get",
+			url: dataUrl,
+			dataType: "json",
+			success: getNews,
+			error: function (o, c, m) { throw (m); }
+		});
     });
 });
 
@@ -216,4 +232,55 @@ function saveNews() {
         console.log('modify news:' + id);
     }
     $('#newsModal').trigger('closeModal');
+}
+
+function getNews(data) {
+    if(data.type != 'success')
+        return;
+        
+    var news = $("#news"+data.id);
+    
+    if(news.length > 0)
+    {
+        // Edit existing news
+        $(news).find(".newsHeadline").text(data.headline);
+        
+        if(data.image == null)
+        {
+            $(news).find(".newsImage").remove();
+        }
+        else
+        {
+            if($(news).find(".newsImage").length > 0)
+            {
+                $(news).find(".newsImage").attr("src", data.image);
+            }
+            else
+            {
+                $(news).find(".newsImageWrapper").append('<img class="newsImage" src="'+data.image+'">')
+            }
+        }
+        
+        $(news).find(".newsTeaser").text(data.text);
+        
+        //TODO: add "read more"-button
+        
+        var curVer = '<i>noch keine ver&ouml;ffentlicht</i>';
+        if(data.published)
+            curVer = data.curVersion;
+            
+        $(news).find(".newsCurVersion").text(curVer);
+        
+        $(news).find(".newsVersion").empty();
+       
+        for(var i=0; i<data.newsVersions.length; i++)
+        {
+            var ver = data.newsVersions[i];
+            var option = '<option value="'+ver.version+'"'
+            if(ver.version==data.showVersion)
+                option += ' selected';
+            option += '>'+ver.version+' - '+ver.modified+' ('+ver.userid+')</option>';
+            $(news).find(".newsVersion").append(option)
+        }
+    }
 }

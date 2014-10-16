@@ -1,14 +1,19 @@
-<div class="newsSingle">
-    <input type="hidden" class="newsId" value="<?php echo $id; ?>" />
+<div class="newsSingle" id="news<?php echo $id; ?>">
     <div class="newsHeadline"><?php echo $headline; ?></div>
+    <div class="newsImageWrapper">
         <?php if($image != null) { ?>
             <img class="newsImage" src="<?php echo URL.$image; ?>">
         <?php } ?>
+    </div>
     <div class="newsTeaser"><?php echo $text; ?></div>
     <div class="newsMeta">
+        <div class="newsMoreWrapper">
         <?php if($newsid != null) { ?>
             <a href="news.php?id=<?php echo $newsid; ?>">weiterlesen</a><br />
-        <?php } 
+        <?php } ?>
+        </div>
+        
+        <?php
               if(isset($news->published)) { 
                   if($news->published == null) {
                       echo '<i>noch nicht ver&ouml;ffentlicht</i>';
@@ -22,15 +27,17 @@
         <button class="newsEdit"><i class="fa fa-edit fa-fw"></i> Bearbeiten</button>
         <button><i class="fa fa-remove fa-fw"></i> L&ouml;schen</button><br />
         Aktuelle Version:
+        <span class="newsCurVersion">
         <?php
             if($published == null) {
                 echo '<i>noch keine ver&ouml;ffentlicht</i>';
             } else {
                 echo $news->version;
             }
-        ?><br />
+        ?>
+        </span><br />
         Version anzeigen: 
-        <select id="newsVersion">
+        <select class="newsVersion">
             <?php foreach($newsVersions as $ver) { 
                 echo '<option value="'.$ver->version.'"';
                 if($ver->version == $showVersion)
