@@ -56,6 +56,13 @@ $(function () {
         showNewsModal('', '', '', '');
     });
     
+    $('.newsDateTimePicker').datetimepicker({
+        lang:'de',
+        format:'d.m.Y - H:i',
+        weeks: true,
+        dayOfWeekStart: 1
+    });
+    
     $('.newsEdit').click(function(e) {
         var news = $(this).closest(".newsSingle")[0];
         var id = news.id.substr(4);
@@ -293,8 +300,7 @@ function updateNews(id, headline, image, text, newsid, published, curVersion, ne
         $(news).find('.newsUnpublished').show();
 
         $(news).find('.newsHide').hide();
-        var dateString = dateToStr(new Date(Date.parse(published)));
-        $(news).find('.newsDateTimePicker').val(dateString);
+        $(news).find('.newsDateTimePicker').val(dateToStr(new Date(Date.now())));
         $(news).find('.newsShow').show();
     }
     

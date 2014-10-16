@@ -8,7 +8,9 @@
     <!-- FavIcon -->
     <link rel="shortcut icon" href="<?php echo URL; ?>public/img/favicon.ico?v=2" type="image/x-icon" />
     <!-- css -->
-    <link href="<?php echo URL; ?>public/css/style.css" rel="stylesheet">
+    <link href="<?php echo URL; ?>public/css/style.css" rel="stylesheet" />
+    <!-- datetimepicker.css -->
+    <link href="<?php echo URL; ?>public/css/jquery.datetimepicker.css" rel="stylesheet" />
 	<!-- font awesome -->
     <link href="<?php echo URL; ?>public/css/font-awesome.min.css" rel="stylesheet">
     <!-- fonts-->
@@ -17,6 +19,8 @@
     <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
 	<!-- easyModal.js (flaviusmatis) -->
 	<script src="<?php echo URL; ?>public/js/jquery.easyModal.js"></script>
+    <!-- datetimepicker.js -->
+    <script src="<?php echo URL; ?>public/js/jquery.datetimepicker.js"></script>
     <!-- our JavaScript -->
     <script>
         const _url = "<?php echo URL; ?>"; 
