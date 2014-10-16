@@ -237,50 +237,92 @@ function saveNews() {
 function getNews(data) {
     if(data.type != 'success')
         return;
-        
+
     var news = $("#news"+data.id);
     
     if(news.length > 0)
     {
-        // Edit existing news
-        $(news).find(".newsHeadline").text(data.headline);
-        
-        if(data.image == null)
-        {
-            $(news).find(".newsImage").remove();
-        }
-        else
-        {
-            if($(news).find(".newsImage").length > 0)
-            {
-                $(news).find(".newsImage").attr("src", data.image);
-            }
-            else
-            {
-                $(news).find(".newsImageWrapper").append('<img class="newsImage" src="'+data.image+'">')
-            }
-        }
-        
-        $(news).find(".newsTeaser").text(data.text);
-        
-        //TODO: add "read more"-button
-        
-        var curVer = '<i>noch keine ver&ouml;ffentlicht</i>';
-        if(data.published)
-            curVer = data.curVersion;
-            
-        $(news).find(".newsCurVersion").text(curVer);
-        
-        $(news).find(".newsVersion").empty();
-       
-        for(var i=0; i<data.newsVersions.length; i++)
-        {
-            var ver = data.newsVersions[i];
-            var option = '<option value="'+ver.version+'"'
-            if(ver.version==data.showVersion)
-                option += ' selected';
-            option += '>'+ver.version+' - '+ver.modified+' ('+ver.userid+')</option>';
-            $(news).find(".newsVersion").append(option)
-        }
+        updateNews(data.id,
+                   data.headline,
+                   data.image,
+                   data.text,
+                   data.newsid,
+                   data.published,
+                   data.curVersion,
+                   data.newsVersions,
+                   data.showVersion);
+        return;
+    } else {
+        // TODO: create news
     }
+}
+
+function updateNews(id, headline, image, text, newsid, published, curVersion, newsVersions, showVersion)
+{
+    var news = $("#news"+id);
+    if(news.length != 1)
+        return;
+    
+    $(news).find('.newsHeadline').text(headline);
+    if(image=='') {
+        $(news).find('.newsImageWrapper').hide();
+    } else {
+        $(news).find('.newsImage').attr('src', image);
+        $(news).find('.newsImageWrapper').show();
+    }
+    
+    $(news).find('.newsTeaser').text(text);
+    
+    if(newsid==0) {
+        $(news).find('.newsMoreWrapper').hide();
+    } else {
+        // TODO: set newsid
+        $(news).find('.newsMoreWrapper').show();
+    }
+    
+    if(published) {
+        $(news).find('.newsUnpublished').hide();
+        var dateString = dateToStr(new Date(Date.parse(published)));
+        $(news).find('.newsDate').text(dateString);
+        $(news).find('.newsPublished').show();
+        
+        $(news).find('.newsShow').hide();
+        $(news).find('.newsHide').show();
+    } else {
+        $(news).find('.newsPublished').hide();
+        $(news).find('.newsUnpublished').show();
+
+        $(news).find('.newsHide').hide();
+        var dateString = dateToStr(new Date(Date.parse(published)));
+        $(news).find('.newsDateTimePicker').val(dateString);
+        $(news).find('.newsShow').show();
+    }
+    
+    $(news).find(".newsCurVersion").text(curVersion);
+    
+    $(news).find(".newsVersion").empty();   
+    for(var i=0; i<newsVersions.length; i++)
+    {
+        var ver = newsVersions[i];
+        var option = '<option value="'+ver.version+'"'
+        if(ver.version==showVersion)
+            option += ' selected';
+        option += '>'+ver.version+' - '+ver.modified+' ('+ver.userid+')</option>';
+        $(news).find(".newsVersion").append(option)
+    }
+
+}
+
+function dateToStr(d) {
+    var date = d.getDate();
+    date = date<10?'0'+date:date;
+    var month = d.getMonth()+1;
+    month = month<10?'0'+month:month;
+    var year = d.getFullYear();
+    var hour = d.getHours();
+    hour = hour<10?'0'+hour:hour;
+    var min = d.getMinutes();
+    min = min<10?'0'+min:min;
+    
+    return date+'.'+month+'.'+year+' - '+hour+':'+min;
 }

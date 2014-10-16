@@ -26,16 +26,18 @@ class Verein extends Controller
         require 'application/views/_templates/header.php';
         require 'application/views/verein/index/bigPictures.php';
         require 'application/views/verein/index/newsHeader.php';
+        
         // load news
         foreach ($lastNews as $news) {
             if(!isset($news->id))
                 continue;
             $id = $news->id;
-            $image = isset($news->image) ? $news->image : null;
+            $image = isset($news->image) ? $news->image : '';
             $headline = isset($news->header) ? $news->header : '';
             $text = isset($news->text) ? $news->text : '';
-            $newsid = isset($news->newsid) ? $news->newsid : null;
+            $newsid = isset($news->newsid) ? $news->newsid : 0;
             $published = isset($news->published) ? $news->published : null;
+            $curVersion = isset($news->version) ? $news->version : 1;
             
             $newsVersions = $newsTeaser_model->getNewsVersions($id);
             $showVersion = isset($news->version) ? $news->version : 1;
