@@ -22,9 +22,33 @@ class Verein extends Controller
         
         $newsTeaser_model = $this->loadModel('NewsTeaserModel');
         $lastNews = $newsTeaser_model->getLastNews(true);
+        
+        $versions = array();
+        foreach ($lastNews as $news) {
+            $curVersions = $newsTeaser_model->getNewsVersions($news->id);
+            $versions[$news->id] = $curVersions;
+        }
 		
         require 'application/views/_templates/header.php';
-        require 'application/views/verein/index.php';
+        require 'application/views/verein/index/bigPictures.php';
+        require 'application/views/verein/index/newsHeader.php';
+        // load news
+        foreach ($lastNews as $news) {
+            if(!isset($news->id))
+                continue;
+            $id = $news->id;
+            $image = isset($news->image) ? $news->image : null;
+            $headline = isset($news->header) ? $news->header : '';
+            $text = isset($news->text) ? $news->text : '';
+            $newsid = isset($news->newsid) ? $news->newsid : null;
+            $text = isset($news->text) ? $news->text : '';
+            $published = isset($news->published) ? $news->published : null;
+            
+            $newsVersions = $versions[$id];
+            $showVersion = isset($news->version) ? $news->version : 1;
+            include 'application/views/verein/index/newsTemplate.php';
+        }
+        require 'application/views/verein/index/newsFooter.php';
         require 'application/views/_templates/footer.php';
     }
 	

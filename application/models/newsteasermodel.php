@@ -15,7 +15,7 @@ class NewsTeaserModel
     }
 
     /**
-     * Get all songs from database
+     * Get last news from database (limit by constant NEWS_COUNT)
      * @param bool $published Published
      */
     public function getLastNews($published)
@@ -41,6 +41,22 @@ class NewsTeaserModel
         // libs/controller.php! If you prefer to get an associative array as the result, then do
         // $query->fetchAll(PDO::FETCH_ASSOC); or change libs/controller.php's PDO options to
         // $options = array(PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC ...
+        return $query->fetchAll();
+    }
+    
+    /**
+     * Get all version-numbers for specified newsteaser
+     * @param string $id NewsTeaserID
+     */
+    public function getNewsVersions($id)
+    {
+        $sql = "SELECT version, modified, userid
+                FROM newsteaserversions
+                WHERE newsteaserid=:id
+                ORDER BY version DESC";
+        $query = $this->db->prepare($sql);
+        $query->execute(array(':id' => $id));
+        
         return $query->fetchAll();
     }
 
