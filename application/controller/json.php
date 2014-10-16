@@ -42,7 +42,7 @@ class Json extends Controller
         require 'application/views/_templates/footer.json.php';
     }
     
-    public function getNews($id, $version)
+    public function getnews($id, $version)
     {
         $newsTeaser_model = $this->loadModel('NewsTeaserModel');
         $news = $newsTeaser_model->getSpecificNews($id, $version);
@@ -52,7 +52,7 @@ class Json extends Controller
         require 'application/views/_templates/footer.json.php';
     }
     
-    public function unpublishNews($id)
+    public function unpublishnews($id)
     {
         $newsTeaser_model = $this->loadModel('NewsTeaserModel');
         $newsTeaser_model->unpublishNews($id);
@@ -68,7 +68,7 @@ class Json extends Controller
         require 'application/views/_templates/footer.json.php';
     }
     
-    public function publishNews($id, $date)
+    public function publishnews($id, $date)
     {
         $newsTeaser_model = $this->loadModel('NewsTeaserModel');
         $newsTeaser_model->publishNews($id, urlencode($date));
