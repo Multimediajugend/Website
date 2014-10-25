@@ -11,9 +11,9 @@ $authenticated = false;
 
 if(isset($data->email) && isset($data->password))
 {
-	$sql = "SELECT * FROM `users` WHERE `email`='".$data->email."' AND `password`='".md5($data->password.SALT)."';";
+	$sql = "SELECT * FROM `users` WHERE `email`=? AND `password`=?;";
     $query = $this->db->prepare($sql);
-    $query->execute();
+	$query->execute(array($data->email, md5($data->password.SALT)));
 	$num_results = $query->rowCount();
 	
 	if($num_results > 0)

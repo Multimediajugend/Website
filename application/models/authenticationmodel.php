@@ -20,9 +20,9 @@ class AuthenticationModel
      */
     public function checkToken($token)
 	{
-		$sql = "SELECT `id`, `token`,UNIX_TIMESTAMP(`lastused`) as lastused, userid FROM `authentication_tokens` WHERE `token`='".$token."' AND DATE_SUB(CURDATE(),INTERVAL 1 DAY) <= `lastused`;";
+		$sql = "SELECT `id`, `token`,UNIX_TIMESTAMP(`lastused`) as lastused, userid FROM `authentication_tokens` WHERE `token`=? AND DATE_SUB(CURDATE(),INTERVAL 1 DAY) <= `lastused`;";
 		$query = $this->db->prepare($sql);
-		$query->execute();
+		$query->execute(array($token)); 
 		$rows = $query->rowCount();
 	
 		if($rows == 1)
@@ -48,9 +48,9 @@ class AuthenticationModel
      */
     public function getUserData($userid)
 	{
-		$sql = "SELECT * FROM `users` WHERE `id`='".$userid."';";
+		$sql = "SELECT * FROM `users` WHERE `id`=?;";
 		$query = $this->db->prepare($sql);
-		$query->execute();
+		$query->execute(array($userid)); 
 		$results = $query->rowCount();
 		
 		if($results > 0)
