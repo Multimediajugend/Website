@@ -18,10 +18,9 @@
                 <textarea id="newsModalText" type="text" cols="55" rows="20" required ></textarea>
             </div>
             <div class="btn clearfix">
-				<button type="submit" onClick="saveNews(); return false;"><i class="fa fa-save fa-fw"></i> Speichern</button>
-				<button class="close cancel"><i class="fa fa-remove fa-fw"></i> Abbruch</button>
-			</div>
-
+                <button type="submit" onClick="saveNews(); return false;"><i class="fa fa-save fa-fw"></i> Speichern</button>
+                <button class="close cancel"><i class="fa fa-remove fa-fw"></i> Abbruch</button>
+            </div>
         </form>
     </div>
 </div>

@@ -1,8 +1,8 @@
 <div id="news">
-	<div class="pageTitle">Impressum</div>
-	<div class="newsSingle">
-		<div class="newsHeadline">Angaben gemäß § 5 TMG</div>
-		<div class="newsTeaser">
+    <div class="pageTitle">Impressum</div>
+    <div class="newsSingle">
+        <div class="newsHeadline">Angaben gemäß § 5 TMG</div>
+        <div class="newsTeaser">
             <p>
                 Multimediale Jugendarbeit Sachsen e.V.<br>
                 Bahnhofstraße 1<br>
@@ -18,20 +18,20 @@
                 Amtsgericht: Chemnitz
             </p>
         </div>
-	</div>
+    </div>
     <div class="newsSingle">
-		<div class="newsHeadline">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</div>
-		<div class="newsTeaser">
+        <div class="newsHeadline">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</div>
+        <div class="newsTeaser">
             <p>
                 Multimediale Jugendarbeit Sachsen e.V.<br>
                 Bahnhofstraße 1<br>
                 09669 Frankenberg
             </p>
         </div>
-	</div>
+    </div>
     <div class="newsSingle">
-		<div class="newsHeadline">Haftungsausschluss</div>
-		<div class="newsTeaser">
+        <div class="newsHeadline">Haftungsausschluss</div>
+        <div class="newsTeaser">
             <h3>1. Inhalt des Onlineangebotes</h3>
             <p>Der Autor übernimmt keinerlei Gewähr für die Aktualität, Korrektheit, Vollständigkeit oder Qualität der bereitgestellten Informationen. Haftungsansprüche gegen den Autor, welche sich auf Schäden materieller oder ideeller Art beziehen, die durch die Nutzung oder Nichtnutzung der dargebotenen Informationen bzw. durch die Nutzung fehlerhafter und unvollständiger Informationen verursacht wurden, sind grundsätzlich ausgeschlossen, sofern seitens des Autors kein nachweislich vorsätzliches oder grob fahrlässiges Verschulden vorliegt.</p>
             <p>Alle Angebote sind freibleibend und unverbindlich. Der Autor behält es sich ausdrücklich vor, Teile der Seiten oder das gesamte Angebot ohne gesonderte Ankündigung zu verändern, zu ergänzen, zu löschen oder die Veröffentlichung zeitweise oder endgültig einzustellen.</p>
@@ -50,6 +50,6 @@
             <h3>5. Rechtswirksamkeit dieses Haftungsausschlusses</h3>
             <p>Dieser Haftungsausschluss ist als Teil des Internetangebotes zu betrachten, von dem aus auf diese Seite verwiesen wurde. Sofern Teile oder einzelne Formulierungen dieses Textes der geltenden Rechtslage nicht, nicht mehr oder nicht vollständig entsprechen sollten, bleiben die übrigen Teile des Dokumentes in ihrem Inhalt und ihrer Gültigkeit davon unberührt.</p>
         </div>
-	</div>
+    </div>
 
 </div>

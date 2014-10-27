@@ -22,15 +22,15 @@ else
     $showVersion = $version;
     
     $output = array(
-		"type" => 'success',
+        "type" => 'success',
         "id" => $id,
-		"image" => $image,
-		"headline" => $headline,
+        "image" => $image,
+        "headline" => $headline,
         "text" => $text,
         "newsid" => $newsid,
         "published" => $published,
         "newsVersions" => $newsVersions,
         "curVersion" => $curVersion,
         "showVersion" => $showVersion
-		); 
+        ); 
 }

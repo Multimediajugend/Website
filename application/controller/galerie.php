@@ -26,25 +26,25 @@ class Galerie extends Controller
         // NOTE: please write the name of the model "LikeThis"
         //$stats_model = $this->loadModel('StatsModel');
         //$amount_of_songs = $stats_model->getAmountOfSongs();
-		
+
         $title = 'Galerie';
-		$active = 'gallery';
+        $active = 'gallery';
 
         // load views. within the views we can echo out $songs and $amount_of_songs easily
         require 'application/views/_templates/header.php';
         require 'application/views/galerie/index.php';
         require 'application/views/_templates/footer.php';
     }
-    
+
     public function untergalerie($galleryName)
     {
         if(isset($galleryName))
             $title = $galleryName;
         else
             $title = 'Galerie';
-    
+
         $active = 'gallery';
-    
+
         require 'application/views/_templates/header.php';
         require 'application/views/galerie/untergalerie.php';
         require 'application/views/_templates/footer.php';

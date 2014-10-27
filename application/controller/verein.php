@@ -17,16 +17,16 @@ class Verein extends Controller
     public function index()
     {
         // load views. within the views we can echo out $songs and $amount_of_songs easily
-		$title = 'Verein';
-		$active = 'verein';
+        $title = 'Verein';
+        $active = 'verein';
         
         $newsTeaser_model = $this->loadModel('NewsTeaserModel');
         $lastNews = $newsTeaser_model->getLastNews(true);
-		
+
         require 'application/views/_templates/header.php';
         require 'application/views/verein/index/bigPictures.php';
         require 'application/views/verein/index/newsHeader.php';
-        
+
         // load news
         foreach ($lastNews as $news) {
             if(!isset($news->id))
@@ -46,40 +46,40 @@ class Verein extends Controller
         require 'application/views/verein/index/newsFooter.php';
         require 'application/views/_templates/footer.php';
     }
-	
-	public function kooperation()
-	{
+
+    public function kooperation()
+    {
         // load views. within the views we can echo out $songs and $amount_of_songs easily
-		$title = 'Kooperation';
+        $title = 'Kooperation';
         require 'application/views/_templates/header.php';
         require 'application/views/verein/kooperation.php';
         require 'application/views/_templates/footer.php';
-	}
-		
-	public function technik()
-	{
+    }
+
+    public function technik()
+    {
         // load views. within the views we can echo out $songs and $amount_of_songs easily
-		$title = 'Technik';
+        $title = 'Technik';
         require 'application/views/_templates/header.php';
         require 'application/views/verein/technik.php';
         require 'application/views/_templates/footer.php';
-	}
-		
-	public function musik()
-	{
+    }
+
+    public function musik()
+    {
         // load views. within the views we can echo out $songs and $amount_of_songs easily
-		$title = 'Musik';
+        $title = 'Musik';
         require 'application/views/_templates/header.php';
         require 'application/views/verein/musik.php';
         require 'application/views/_templates/footer.php';
-	}
-		
-	public function sport()
-	{
+    }
+
+    public function sport()
+    {
         // load views. within the views we can echo out $songs and $amount_of_songs easily
-		$title = 'Sport';
+        $title = 'Sport';
         require 'application/views/_templates/header.php';
         require 'application/views/verein/sport.php';
         require 'application/views/_templates/footer.php';
-	}
+    }
 }

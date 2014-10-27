@@ -26,9 +26,9 @@ class Mitglieder extends Controller
         // NOTE: please write the name of the model "LikeThis"
         //$stats_model = $this->loadModel('StatsModel');
         //$amount_of_songs = $stats_model->getAmountOfSongs();
-		
+
         $title = 'Mitglieder';
-		$active = 'member';
+        $active = 'member';
 
         // load views. within the views we can echo out $songs and $amount_of_songs easily
         require 'application/views/_templates/header.php';
