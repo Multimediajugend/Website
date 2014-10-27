@@ -24,7 +24,7 @@ class Json extends Controller
         require 'application/views/json/login.php';
         require 'application/views/_templates/footer.json.php';
     }
-
+    
     public function checkToken()
     {    
         $auth = $this->loadModel('AuthenticationModel');
@@ -44,43 +44,78 @@ class Json extends Controller
 
     public function getnews($id, $version)
     {
-        $newsTeaser_model = $this->loadModel('NewsTeaserModel');
-        $news = $newsTeaser_model->getSpecificNews($id, $version);
-
+        $user = getUserData($this->loadModel('AuthenticationModel'));
+        
         require 'application/views/_templates/header.json.php';
-        require 'application/views/json/getnews.php';
+        
+        if($user!=NULL)
+        {
+            $newsTeaser_model = $this->loadModel('NewsTeaserModel');
+            $news = $newsTeaser_model->getSpecificNews($id, $version);
+
+            require 'application/views/json/getnews.php';
+        } else {
+            $output = array(
+                "type" => 'error'
+                );
+        }
+
         require 'application/views/_templates/footer.json.php';
     }
 
     public function unpublishnews($id)
     {
-        $newsTeaser_model = $this->loadModel('NewsTeaserModel');
-        $newsTeaser_model->unpublishNews($id);
+        $user = getUserData($this->loadModel('AuthenticationModel'));
         
-        $ver = $newsTeaser_model->getNewsVersions($id)[0]->version;
-
         require 'application/views/_templates/header.json.php';
-        $output = array(
-            "type" => 'success',
-            "id" => $id,
-            "version" => $ver
-        );        
+        
+        if($user!=NULL)
+        {
+            $newsTeaser_model = $this->loadModel('NewsTeaserModel');
+            $newsTeaser_model->unpublishNews($id);
+
+            $ver = $newsTeaser_model->getNewsVersions($id)[0]->version;
+
+            $output = array(
+                "type" => 'success',
+                "id" => $id,
+                "version" => $ver
+            );
+        } else {
+            $output = array(
+                "type" => 'error'
+                );
+        }
+        
         require 'application/views/_templates/footer.json.php';
     }
     
     public function publishnews($id, $date)
     {
-        $newsTeaser_model = $this->loadModel('NewsTeaserModel');
-        $newsTeaser_model->publishNews($id, urlencode($date));
+        $user = getUserData($this->loadModel('AuthenticationModel'));
         
-        $ver = $newsTeaser_model->getNewsVersions($id)[0]->version;
-
         require 'application/views/_templates/header.json.php';
-        $output = array(
-            "type" => 'success',
-            "id" => $id,
-            "version" => $ver
-        );
+        
+        if($user!=NULL)
+        {
+        
+            $newsTeaser_model = $this->loadModel('NewsTeaserModel');
+            $newsTeaser_model->publishNews($id, urlencode($date));
+
+            $ver = $newsTeaser_model->getNewsVersions($id)[0]->version;
+
+            require 'application/views/_templates/header.json.php';
+            $output = array(
+                "type" => 'success',
+                "id" => $id,
+                "version" => $ver
+            );
+        } else {
+            $output = array(
+                "type" => 'error'
+                );
+        }
+        
         require 'application/views/_templates/footer.json.php';
     }
 }
