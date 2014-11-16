@@ -203,6 +203,7 @@ function clearStorage() {
     sessionStorage.removeItem("lastname");
     sessionStorage.removeItem("id");
     sessionStorage.removeItem("lastlogin");
+    sessionStorage.removeItem("contenteditorActivated");
 }
 
 function setStorage(token, userdata) {
