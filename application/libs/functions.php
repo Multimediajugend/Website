@@ -22,4 +22,11 @@ function getUserData($auth)
     }
 }
 
+function getHashedPassword($password)
+{
+    require LIBS_PATH . '/password.php';
+    // tested - cost 11 takes about 0.11 s per run, that's enough
+    return password_hash($password, PASSWORD_BCRYPT, array("cost" => 11));
+}
+
 ?>

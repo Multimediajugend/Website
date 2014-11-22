@@ -5,30 +5,35 @@
 ### fields: email, password
 ###
 
+require LIBS_PATH . '/password.php';
 
 $data = json_decode( file_get_contents('php://input') );
 $authenticated = false;
 
 if(isset($data->email) && isset($data->password))
 {
-    $sql = "SELECT * FROM `users` WHERE `email`=? AND `password`=?;";
+    $sql = "SELECT * FROM `users` WHERE `email`=?;";
     $query = $this->db->prepare($sql);
-    $query->execute(array($data->email, md5($data->password.SALT)));
+    $query->execute(array($data->email));
     $num_results = $query->rowCount();
 
     if($num_results > 0)
     {
         $row = $query->fetch();
+        
+        if(password_verify($data->password, $row->password))
+        {
+            $authenticated = true;
 
-        $authenticated = true;
+            $user = array(
+                "id" => $row->id,
+                "firstname" => $row->firstname,
+                "lastname" => $row->lastname,
+                "lastlogin" => $row->lastlogin,
+                "email" => $row->email,
+                );
+        }
 
-        $user = array(
-            "id" => $row->id,
-            "firstname" => $row->firstname,
-            "lastname" => $row->lastname,
-            "lastlogin" => $row->lastlogin,
-            "email" => $row->email,
-            );
     }
 }
 

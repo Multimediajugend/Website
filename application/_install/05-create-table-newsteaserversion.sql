@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `newsteaserversions` (
   `header` varchar(255) NOT NULL,
   `image` varchar(255) DEFAULT NULL,
   `text` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Daten für Tabelle `newsteaserversions`

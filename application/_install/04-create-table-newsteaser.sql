@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS `newsteaser` (
   `userid` int(11) NOT NULL,
   `published` timestamp NULL DEFAULT NULL,
   `newsid` int(11) DEFAULT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci AUTO_INCREMENT=3 ;
 
 --
 -- Daten für Tabelle `newsteaser`
