@@ -41,3 +41,9 @@ define('DB_HOST', 'localhost');
 define('DB_NAME', 'mjs-2014');
 define('DB_USER', 'root');
 define('DB_PASS', '');
+
+/**
+ * Base Path
+ */
+define('APPLICATION_PATH', realpath(dirname(__FILE__) . '/../'));
+define('LIBS_PATH', realpath(APPLICATION_PATH . '/libs/'));
