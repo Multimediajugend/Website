@@ -19,7 +19,30 @@ class Json extends Controller
     }
 
     public function login()
-    {    
+    {
+        $auth = $this->loadModel('AuthenticationModel');
+        
+        require LIBS_PATH . '/password.php';
+
+        $data = json_decode( file_get_contents('php://input') );
+        $authenticated = false;
+
+        if(isset($data->email) && isset($data->password))
+        {
+            $user = $auth->getUserData(array('email' => $data->email), true);
+
+            if(password_verify($data->password, $user["password"]))
+            {
+                $authenticated = true;
+
+                $token = md5(myuniqid());
+
+                $sql = "INSERT INTO `authentication_tokens` (`id`, `token`, `lastused`, `userid`) VALUES ('".myuniqid()."', '".$token."', CURRENT_TIMESTAMP(), ".$user["id"].");";
+                $query = $this->db->prepare($sql);
+                $query->execute();
+            }
+        }
+        
         require 'application/views/_templates/header.json.php';
         require 'application/views/json/login.php';
         require 'application/views/_templates/footer.json.php';

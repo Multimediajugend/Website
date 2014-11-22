@@ -15,8 +15,9 @@ class AuthenticationModel
     }
 
     /**
-     * check if token is valid
-	 * returns: corresponding userid for token or false if token is not valid
+     * Check if token is valid
+     * @param string $token
+     * @return boolean corresponding userid for token or false if token is not valid
      */
     public function checkToken($token)
     {
@@ -44,13 +45,20 @@ class AuthenticationModel
     }
 
     /**
-     * check if token is valid
+     * Get user data for specified userid or email
+     * @param int $needle key => value
+     * @return mixed user data in an array or false
      */
-    public function getUserData($userid)
+    public function getUserData(array $needle, $includePassword = false)
     {
-        $sql = "SELECT * FROM `users` WHERE `id`=?;";
+        if(!in_array(key($needle), array('id', 'email'))) // enforce it must be id or email to avoid sql injections
+        {
+            return false;
+        }
+
+        $sql = "SELECT * FROM `users` WHERE `".key($needle)."`=?;";
         $query = $this->db->prepare($sql);
-        $query->execute(array($userid)); 
+        $query->execute(array(current($needle))); 
         $results = $query->rowCount();
 
         if($results > 0)
@@ -58,12 +66,17 @@ class AuthenticationModel
             $result = $query->fetch();
 
             $user = array(
-                    "id" => $result->id,
-                    "firstname" => $result->firstname,
-                    "lastname" => $result->lastname,
-                    "lastlogin" => $result->lastlogin,
-                    "email" => $result->email,
-                    ); 
+                "id" => $result->id,
+                "firstname" => $result->firstname,
+                "lastname" => $result->lastname,
+                "lastlogin" => $result->lastlogin,
+                "email" => $result->email,
+            );
+
+            if($includePassword)
+            {
+                $user["password"] = $result->password;
+            }
 
             return $user;
         }

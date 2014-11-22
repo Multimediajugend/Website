@@ -18,7 +18,7 @@ function getUserData($auth)
         $userid = $auth->checkToken($token);
         if(!$userid)
             return null;
-        return $auth->getUserData($userid);
+        return $auth->getUserData(array('id' => $userid));
     }
 }
 
