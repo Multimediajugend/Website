@@ -85,4 +85,16 @@ class AuthenticationModel
             return false;
         }
     }
+    
+    /**
+     * Inserts a new authentication token for the supplied userid
+     * @param string $token authToken
+     * @param int userid
+     */
+    public function insertAuthToken($token, $userid)
+    {
+        $sql = "INSERT INTO `authentication_tokens` (`id`, `token`, `lastused`, `userid`) VALUES ('".myuniqid()."', '".$token."', CURRENT_TIMESTAMP(), $userid);";
+        $query = $this->db->prepare($sql);
+        $query->execute();
+    }
 }

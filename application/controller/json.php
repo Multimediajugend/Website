@@ -34,12 +34,8 @@ class Json extends Controller
             if(password_verify($data->password, $user["password"]))
             {
                 $authenticated = true;
-
                 $token = md5(myuniqid());
-
-                $sql = "INSERT INTO `authentication_tokens` (`id`, `token`, `lastused`, `userid`) VALUES ('".myuniqid()."', '".$token."', CURRENT_TIMESTAMP(), ".$user["id"].");";
-                $query = $this->db->prepare($sql);
-                $query->execute();
+                $auth->insertAuthToken($token, $user["id"]);
             }
         }
         
