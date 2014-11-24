@@ -106,6 +106,10 @@
 	clear: both;
 }
 
+.newsTeaser {
+	text-align: justify;
+}
+
 .newsHeadline {
 	/* font-family: 'Nunito', Arial, Helvetica, sans-serif; */
 	font-size: 24px;

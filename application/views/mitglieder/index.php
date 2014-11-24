@@ -1,6 +1,6 @@
 <div id="member">
     <div class="memberWrapper">
-        <div class="memberGrid left twoThird">
+        <div class="memberGrid left threeQuarter">
             <div class="pageTitle">Der Vorstand</div>
             <div class="editSection">
                 <button><i class="fa fa-plus fa-fw"></i> Hinzufügen</button>
@@ -10,7 +10,7 @@
                     <img src="<?php echo URL; ?>public/img/member/member1.jpg" />
                 </div>
                 <div class="memberExtra">
-                    <div class="memberName">Stefan Haslinger</div>
+                    <div class="memberName"><a href="mailto:">Stefan Haslinger</a></div>
                     <div class="memberJob">Vorsitzender</div>
                     <div class="memberDescription">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</div>
                 </div>
@@ -76,26 +76,19 @@
                 <button><i class="fa fa-remove fa-fw"></i> Löschen</button>
             </div>
         </div>
-        <div class="memberGrid right oneThird">
-            <div class="pageTitle">Mitglieder</div>
+        <div class="memberGrid right oneQuarter">
+            <div class="pageTitle">Dokumente</div>
             <div class="editSection">
                 <button><i class="fa fa-edit fa-fw"></i> Verwalten</button>
             </div>
-            <ul class="memberList">
-                <li class="memberEntry">Ansgar Fischer</li>
-                <li class="memberEntry">David Fritsche</li>
-                <li class="memberEntry">J&ouml;rg Weber</li>
-                <li class="memberEntry">Lisa Bemmann</li>
-                <li class="memberEntry">Nicole Winkler</li>
-                <li class="memberEntry">Robert Haslinger</li>
-                <li class="memberEntry">Sophie Uhlig</li>
-                <li class="memberEntry">Thomas Junghänel</li>
-                <li class="memberEntry">Tilmann Bach</li>
-            </ul>
-            <div class="memberJoin">
-                    <div class="memberJoinDescription">Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</div>
-                    <button>Mitglied werden</button>
+            <div class="" style="text-align: justify">
+                Um sich über die bürokratischen Inhalte der Multimedialen Jugendarbeit Sachsen e.V. zu informieren, sind folgend die öffentlichen Dokumente des Vereins als Download bereitgestellt.
             </div>
+            <ul class="memberList">
+                <li class="memberEntry"><a href="#"><i class="fa fa-download fa-fw"></i> Vereinssatzung (ab 2014)</a></li>
+                <li class="memberEntry"><a href="#"><i class="fa fa-download fa-fw"></i> Beitragsordnung (ab 2014)</a></li>
+                <li class="memberEntry"><a href="#"><i class="fa fa-download fa-fw"></i> Beitrittserklärung</a></li>
+            </ul>
         </div>
     </div>
 </div>
