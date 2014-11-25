@@ -8,8 +8,8 @@
     <div class="grid oneFifth">
         <div class="pageTitle">Projekte</div>
         <ul class="memberList">
-            <li class="memberEntry"><a href="#"><i class="fa fa-download fa-fw"></i> Schwimmen</a></li>
-            <li class="memberEntry"><a href="#"><i class="fa fa-download fa-fw"></i> Billard</a></li>
+            <li class="memberEntry"><a href="<?php echo URL; ?>public/docs/Projektbeschreibung-Schwimmen.pdf" target="_blank"><i class="fa fa-download fa-fw"></i> Schwimmen</a></li>
+            <li class="memberEntry"><a href="<?php echo URL; ?>public/docs/Projektbeschreibung-Billard.pdf" target="_blank"><i class="fa fa-download fa-fw"></i> Billard</a></li>
             <li class="memberEntry"><a href="#"><i class="fa fa-download fa-fw"></i> Radtouren</a></li>
         </ul>
     </div>

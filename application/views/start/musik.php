@@ -8,8 +8,8 @@
     <div class="grid oneFifth">
         <div class="pageTitle">Projekte</div>
         <ul class="memberList">
-            <li class="memberEntry"><a href="#"><i class="fa fa-download fa-fw"></i> Bands4Friends</a></li>
-            <li class="memberEntry"><a href="#"><i class="fa fa-download fa-fw"></i> Media meets People</a></li>
+            <li class="memberEntry"><a href="<?php echo URL; ?>public/docs/Projektbeschreibung-Bands4Friends.pdf" target="_blank"><i class="fa fa-download fa-fw"></i> Bands4Friends</a></li>
+            <li class="memberEntry"><a href="<?php echo URL; ?>public/docs/Projektbeschreibung-Media%20meets%20People.pdf" target="_blank"><i class="fa fa-download fa-fw"></i> Media meets People</a></li>
             <li class="memberEntry"><a href="#"><i class="fa fa-download fa-fw"></i> Bandlounge</a></li>
         </ul>
     </div>
