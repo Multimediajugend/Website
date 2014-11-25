@@ -1,7 +1,8 @@
 <?php
 
 /**
- * Class Home
+ * Class Songs
+ * This is a demo class.
  *
  * Please note:
  * Don't use the same name for class and method, as this might trigger an (unintended) __construct of the class.
@@ -12,74 +13,26 @@ class Verein extends Controller
 {
     /**
      * PAGE: index
-     * This method handles what happens when you move to http://yourproject/home/index (which is the default page btw)
+     * This method handles what happens when you move to http://localhost/Mitglieder
      */
     public function index()
     {
-        // load views. within the views we can echo out $songs and $amount_of_songs easily
+        // load a model, perform an action, pass the returned data to a variable
+        // NOTE: please write the name of the model "LikeThis"
+        //$songs_model = $this->loadModel('SongsModel');
+        //$songs = $songs_model->getAllSongs();
+
+        // load another model, perform an action, pass the returned data to a variable
+        // NOTE: please write the name of the model "LikeThis"
+        //$stats_model = $this->loadModel('StatsModel');
+        //$amount_of_songs = $stats_model->getAmountOfSongs();
+
         $title = 'Verein';
         $active = 'verein';
-        
-        $newsTeaser_model = $this->loadModel('NewsTeaserModel');
-        $lastNews = $newsTeaser_model->getLastNews(true);
 
-        require 'application/views/_templates/header.php';
-        require 'application/views/verein/index/bigPictures.php';
-        require 'application/views/verein/index/newsHeader.php';
-
-        // load news
-        foreach ($lastNews as $news) {
-            if(!isset($news->id))
-                continue;
-            $id = $news->id;
-            $image = isset($news->image) ? $news->image : '';
-            $headline = isset($news->header) ? $news->header : '';
-            $text = isset($news->text) ? $news->text : '';
-            $newsid = isset($news->newsid) ? $news->newsid : 0;
-            $published = isset($news->published) ? $news->published : null;
-            $curVersion = isset($news->version) ? $news->version : 1;
-            
-            $newsVersions = $newsTeaser_model->getNewsVersions($id);
-            $showVersion = isset($news->version) ? $news->version : 1;
-            include 'application/views/verein/index/newsTemplate.php';
-        }
-        require 'application/views/verein/index/newsFooter.php';
-        require 'application/views/_templates/footer.php';
-    }
-
-    public function kooperation()
-    {
         // load views. within the views we can echo out $songs and $amount_of_songs easily
-        $title = 'Kooperation';
         require 'application/views/_templates/header.php';
-        require 'application/views/verein/kooperation.php';
-        require 'application/views/_templates/footer.php';
-    }
-
-    public function technik()
-    {
-        // load views. within the views we can echo out $songs and $amount_of_songs easily
-        $title = 'Technik';
-        require 'application/views/_templates/header.php';
-        require 'application/views/verein/technik.php';
-        require 'application/views/_templates/footer.php';
-    }
-
-    public function musik()
-    {
-        // load views. within the views we can echo out $songs and $amount_of_songs easily
-        $title = 'Musik';
-        require 'application/views/_templates/header.php';
-        require 'application/views/verein/musik.php';
-        require 'application/views/_templates/footer.php';
-    }
-
-    public function sport()
-    {
-        // load views. within the views we can echo out $songs and $amount_of_songs easily
-        $title = 'Sport';
-        require 'application/views/_templates/header.php';
-        require 'application/views/verein/sport.php';
+        require 'application/views/verein/index.php';
         require 'application/views/_templates/footer.php';
     }
 }

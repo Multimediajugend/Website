@@ -7,7 +7,7 @@
             </div>
             <div class="memberSingle">
                 <div class="memberImage">
-                    <img src="<?php echo URL; ?>public/img/member/member1.jpg" />
+                    <img src="<?php echo URL; ?>public/img/verein/member1.jpg" />
                 </div>
                 <div class="memberExtra">
                     <div class="memberName"><a href="mailto:">Stefan Haslinger</a></div>
@@ -21,7 +21,7 @@
             </div>
             <div class="memberSingle">
                 <div class="memberImage">
-                    <img src="<?php echo URL; ?>public/img/member/member2.jpg" />
+                    <img src="<?php echo URL; ?>public/img/verein/member2.jpg" />
                 </div>
                 <div class="memberExtra">
                     <div class="memberName">Sebastian Flemig</div>
@@ -35,7 +35,7 @@
             </div>
             <div class="memberSingle">
                 <div class="memberImage">
-                    <img src="<?php echo URL; ?>public/img/member/member3.jpg" />
+                    <img src="<?php echo URL; ?>public/img/verein/member3.jpg" />
                 </div>
                 <div class="memberExtra">
                     <div class="memberName">Daniela Kurz</div>
@@ -49,7 +49,7 @@
             </div>
             <div class="memberSingle">
                 <div class="memberImage">
-                    <img src="<?php echo URL; ?>public/img/member/member4.jpg" />
+                    <img src="<?php echo URL; ?>public/img/verein/member4.jpg" />
                 </div>
                 <div class="memberExtra">
                     <div class="memberName">Ronny Wienhold</div>
@@ -63,7 +63,7 @@
             </div>
             <div class="memberSingle">
                 <div class="memberImage">
-                    <img src="<?php echo URL; ?>public/img/member/member5.jpg" />
+                    <img src="<?php echo URL; ?>public/img/verein/member5.jpg" />
                 </div>
                 <div class="memberExtra">
                     <div class="memberName">Martin Meyer</div>
