@@ -1,0 +1,50 @@
+.wrapper {
+    
+}
+
+.grid {
+    float: left;
+    position: relative;
+    margin-left: 0;
+    margin-right: 20px;
+}
+
+.wrapper>div:last-child {
+    margin-right: 0;
+}
+
+.oneHalf {
+    width: 470px;
+}
+
+.oneThird {
+    width: 300px;
+}
+
+.twoThird {
+    width: 630px;
+}
+
+.oneQuarter {
+    width: 225px;
+}
+
+.threeQuarter {
+    width: 715px;
+}
+
+.oneFifth {
+    width: 176px;
+}
+
+.twoFifth {
+    width: 372px;
+}
+
+.threeFifth {
+    width: 568px;
+}
+
+.fourFifth {
+    width: 764px;
+}

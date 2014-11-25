@@ -8,7 +8,8 @@
     <!-- FavIcon -->
     <link rel="shortcut icon" href="<?php echo URL; ?>public/img/favicon.ico?v=2" type="image/x-icon" />
     <!-- css -->
-    <link href="<?php echo URL; ?>public/css/style.css" rel="stylesheet" />
+    <link href="<?php echo URL; ?>public/css/style.css?v=1" rel="stylesheet" />
+    <link href="<?php echo URL; ?>public/css/grid.css?v=1" rel="stylesheet" />
     <!-- datetimepicker.css -->
     <link href="<?php echo URL; ?>public/css/jquery.datetimepicker.css" rel="stylesheet" />
     <!-- font awesome -->
