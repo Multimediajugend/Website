@@ -1,7 +1,7 @@
 <div class="wrapper">
     <div class="grid fourFifth">
         <div class="pageTitle">Sport</div>
-        <div class="" style="text-align: justify">
+        <div class="pageText">
             Die moderne multimediale Gesellschaft führt in einigen Köpfen zu einer direkten Assoziation des Dessintereses an sportlichen Interaktionen. Die Multimediale Jugendarbeit Sachsen e.V. hat einen großen Fokus zur sportlichen Betätigung im multimedialen Alltag. Dabei jedoch nicht als Ausgleich mit Verpflichtungsansatz, sondern vielmehr als Aufklärung, dass sportliche Betätigung ein Teil der Multimedialen Welt ist. Ohne Bewegung lässt sich nicht kommunizieren. Ohne Kommunikation, keine multimediale Welt. Wichtig ist das bewusste sportliche Aggieren im Alltag, verbunden mit Wissenaustausch zur langfristig gesunden Alltagsgestaltung.
         </div>
     </div>

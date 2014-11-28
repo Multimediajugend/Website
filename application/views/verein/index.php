@@ -87,7 +87,7 @@
         <div class="editSection">
             <button><i class="fa fa-edit fa-fw"></i> Verwalten</button>
         </div>
-        <div class="" style="text-align: justify">
+        <div class="pageText">
             Um sich über die bürokratischen Inhalte der Multimedialen Jugendarbeit Sachsen e.V. zu informieren, sind folgend die öffentlichen Dokumente des Vereins als Download bereitgestellt.
         </div>
         <ul>

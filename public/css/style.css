@@ -125,6 +125,10 @@
     color: #4c4c4c;
 }
 
+.pageText {
+    text-align: justify;
+}
+
 .color-1 {
     color: #dc5130;
 }
@@ -222,6 +226,10 @@ ul {
 
 .newsMeta {
     margin-bottom: 5px;
+}
+
+.koopSponsor {
+    text-align:center;
 }
 
 .boardSingle {
