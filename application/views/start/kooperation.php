@@ -2,14 +2,14 @@
     <div class="grid fourFifth">
         <div class="pageTitle">Kooperation</div>
         <div class="pageText">
-            Durch die Enwicklung der Multimedialen Jugendarbeit Sachsen e.V. zu einem projektorientierten Verein mit hohem Facettenreichtum, bieten unser Verein unterschiedlichste Schnittstellen für Kooperationen und ist gleichzeitig darauf angewiesen. Viele lokale und überregionale Organisationen können gleichzeitig von unseren Erfahren und Ressourcen profitieren und ein reger Austausch auf multimedialer Ebene findet stetig statt und entwickelt sich dabei in die unterschiedlichsten Richtungen mit dynamischen Verzweigungen. Gemeinschaft sollte nicht nur im Verein gelebt werden, sondern nach außen publiziert und realisiert werden. Auf diesem Wege ist Ressourcenknappheit, in jeglicher Art, taktisch und strategisch überwindbar. Die Multimediale Jugendarbeit Sachsen e.V. ist ebenfalls auf Unterstützung angewiesen und ist sehr stolz darauf, die folgenden Partner als feste Stützpfeiler in der multimedialen Arbeit an der Seite zu wissen.
+            Durch die Enwicklung des Multimedialen Jugendarbeit Sachsen e.V. zu einem projektorientierten Verein mit hohem Facettenreichtum, bietet unser Verein unterschiedlichste Schnittstellen für Kooperationen und ist gleichzeitig darauf angewiesen. Viele lokale und überregionale Organisationen können gleichzeitig von unseren Erfahrungen und Ressourcen profitieren und ein reger Austausch auf multimedialer Ebene findet stetig statt und entwickelt sich dabei in die unterschiedlichsten Richtungen mit dynamischen Verzweigungen. Gemeinschaft sollte nicht nur im Verein gelebt werden, sondern nach außen publiziert und umgesetzt werden. Auf diesem Wege ist Ressourcenknappheit, in jeglicher Art, taktisch und strategisch überwindbar. Der Multimediale Jugendarbeit Sachsen e.V. ist ebenfalls auf Unterstützung angewiesen und ist sehr stolz darauf, die folgenden Partner als feste Stützpfeiler in der multimedialen Arbeit an der Seite zu wissen.
         </div>
     </div>
     <div class="grid oneFifth">
         <div class="pageTitle">Projekte</div>
         <ul class="memberList">
-            <li class="memberEntry"><a href="#" target="_blank"><i class="fa fa-download fa-fw"></i> Klangfarben</a></li>
-            <li class="memberEntry"><a href="#" target="_blank"><i class="fa fa-download fa-fw"></i> Chemnitz zockt</a></li>
+            <li class="memberEntry"><i class="fa fa-download fa-fw" title="Bald verf&uuml;gbar"></i> Klangfarben</a></li>
+            <li class="memberEntry"><a href="<?php echo URL; ?>public/docs/Projektbeschreibung-Chemnitz%20zockt.pdf"><i class="fa fa-download fa-fw"></i> Chemnitz zockt</a></li>
         </ul>
     </div>
 </div>

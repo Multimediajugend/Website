@@ -3,17 +3,19 @@
     <div class="newsImageWrapper"<?php if($image=='') echo ' style="display: none;"' ?>>
         <img class="newsImage" src="<?php echo URL.$image; ?>">
     </div>
-    <div class="newsTeaser"><?php echo $text; ?></div>
-    <div class="newsMeta">
-        <span class="newsMoreWrapper"<?php if($newsid == 0) echo ' style="display: none;"' ?>>
-            <a href="news.php?id=<?php echo $newsid; ?>">weiterlesen</a><br />
-        </span>
-        <span class="newsUnpublished"<?php if($published) echo ' style="display: none;"' ?>>
-            <i>noch nicht ver&ouml;ffentlicht</i>
-        </span>
-        <span class="newsPublished"<?php if(!$published) echo ' style="display: none;"' ?>>
-            (vom <span class="newsDate"><?php echo date("d.m.Y - H:i",strtotime($published)); ?></span>)
-        </span>
+    <div class="newsTextWrapper">
+        <div class="newsTeaser"><?php echo $text; ?></div>
+        <div class="newsMeta">
+            <span class="newsMoreWrapper"<?php if($newsid == 0) echo ' style="display: none;"' ?>>
+                <a href="news.php?id=<?php echo $newsid; ?>">weiterlesen</a><br />
+            </span>
+            <span class="newsUnpublished"<?php if($published) echo ' style="display: none;"' ?>>
+                <i>noch nicht ver&ouml;ffentlicht</i>
+            </span>
+            <span class="newsPublished"<?php if(!$published) echo ' style="display: none;"' ?>>
+                (vom <span class="newsDate"><?php echo date("d.m.Y - H:i",strtotime($published)); ?></span>)
+            </span>
+        </div>
     </div>
     <div style="clear:left"></div>
     <div class="editSection">
