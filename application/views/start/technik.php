@@ -9,7 +9,7 @@
         <div class="pageTitle">Projekte</div>
         <ul class="memberList">
             <li class="memberEntry"><i class="fa fa-download fa-fw" title="Bald verf&uuml;gbar"></i> Clanwars XI</li>
-            <li class="memberEntry"><a href="<?php echo URL; ?>public/docs/Projektbeschreibung-Chemnitz%20zockt.pdf"><i class="fa fa-download fa-fw"></i> Chemnitz zockt</a></li>
+            <li class="memberEntry"><a href="<?php echo URL; ?>public/docs/Projektbeschreibung-Chemnitz%20zockt.pdf" target="_blank"><i class="fa fa-download fa-fw"></i> Chemnitz zockt</a></li>
             <li class="memberEntry"><i class="fa fa-download fa-fw" title="Bald verf&uuml;gbar"></i> BOINC</li>
         </ul>
     </div>

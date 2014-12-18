@@ -9,7 +9,7 @@
         <div class="pageTitle">Projekte</div>
         <ul class="memberList">
             <li class="memberEntry"><i class="fa fa-download fa-fw" title="Bald verf&uuml;gbar"></i> Klangfarben</a></li>
-            <li class="memberEntry"><a href="<?php echo URL; ?>public/docs/Projektbeschreibung-Chemnitz%20zockt.pdf"><i class="fa fa-download fa-fw"></i> Chemnitz zockt</a></li>
+            <li class="memberEntry"><a href="<?php echo URL; ?>public/docs/Projektbeschreibung-Chemnitz%20zockt.pdf" target="_blank"><i class="fa fa-download fa-fw"></i> Chemnitz zockt</a></li>
         </ul>
     </div>
 </div>
@@ -18,5 +18,6 @@
     <div class="koopSponsor">
         <a href="http://www.bad-brambacher.de/" target="_blank" title="Bad Brambacher"><img src="<?php echo URL; ?>public/img/kooperation/badbrambacher.png" height="120px" /></a>
         <a href="http://www.braustolz.de/" target="_blank" title="Braustolz"><img src="<?php echo URL; ?>public/img/kooperation/braustolz.png"  height="120px" /></a>
+        <a href="https://www.vb-mittweida.de/" target="_blank" title="Volksbank Mittweida"><img src="<?php echo URL; ?>public/img/kooperation/vbmittweida.png"  width="200px" /></a>
     </div>
 </div>
