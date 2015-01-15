@@ -22,11 +22,8 @@
     <script src="<?php echo URL; ?>public/js/jquery.easyModal.js"></script>
     <!-- datetimepicker.js -->
     <script src="<?php echo URL; ?>public/js/jquery.datetimepicker.js"></script>
-    <!-- our JavaScript -->
-    <script>
-        const _url = "<?php echo URL; ?>"; 
-    </script>
-    <script src="<?php echo URL; ?>public/js/application.js"></script>
+    <!-- login-script -->
+    <script src="<?php echo URL; ?>public/js/login.js"></script>
 </head>
 <body>
 <!-- header -->

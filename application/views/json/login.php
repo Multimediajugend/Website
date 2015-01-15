@@ -4,8 +4,9 @@ if($authenticated)
 {
     $output = array(
         "type" => 'success',
+        "script" => URL.'public/js/admin.js',
         "token" => $token,
-        "user" => $user,
+        "user" => $user
     ); 
 }
 else
