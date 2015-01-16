@@ -138,4 +138,3 @@ function clearStorage() {
     sessionStorage.removeItem("lastlogin");
     sessionStorage.removeItem("contenteditorActivated");
 }
-

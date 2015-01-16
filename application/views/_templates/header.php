@@ -9,6 +9,7 @@
     <link rel="shortcut icon" href="<?php echo URL; ?>public/img/favicon.ico?v=2" type="image/x-icon" />
     <!-- css -->
     <link href="<?php echo URL; ?>public/css/style.css?v=1" rel="stylesheet" />
+    <link href="<?php echo URL; ?>public/css/dev.css?v=1" rel="stylesheet" />
     <link href="<?php echo URL; ?>public/css/grid.css?v=1" rel="stylesheet" />
     <!-- datetimepicker.css -->
     <link href="<?php echo URL; ?>public/css/jquery.datetimepicker.css" rel="stylesheet" />
@@ -24,6 +25,7 @@
     <script src="<?php echo URL; ?>public/js/jquery.datetimepicker.js"></script>
     <!-- login-script -->
     <script src="<?php echo URL; ?>public/js/login.js"></script>
+    <script src="<?php echo URL; ?>public/js/dev.js"></script>
 </head>
 <body>
 <!-- header -->
@@ -32,7 +34,7 @@
         Manager (<span data-binding="vorname"></span>) 
         <span id="adminNav">
             <button id="adminPanelButtonProfile"><i class="fa fa-user fa-fw"></i> Mein Profil</button>
-            <button id="adminPanelButtonUsers"><i class="fa fa-users fa-fw"></i> Accountmanager</button>
+            <button id="adminPanelButtonUsers" onclick="location.href='<?php echo URL ?>accmgr'"><i class="fa fa-users fa-fw"></i> Accountmanager</button>
             <button id="adminPanelButtonContents" onClick="toggleContenteditor();"><i class="fa fa-font fa-fw"></i> Inhaltseditor</button>
             <button id="adminPanelButtonLogout" onClick="endAdmin();"><i class="fa fa-power-off fa-fw"></i> Logout</button>
         </span>

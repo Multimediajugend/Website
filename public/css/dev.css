@@ -1,0 +1,56 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 15.01.2015, 14:47:11
+    Author     : mmeyer
+*/
+
+.accmgr li {
+    border: 1px #ddd solid;
+    border-top: 0px;
+    cursor: pointer;
+}
+
+.accmgr li:first-child {
+    border-top: 1px #ddd solid;
+}
+
+.accmgr li:nth-child(even) {
+    background-color: #fcfcfc
+}
+
+.accmgr li:nth-child(odd) {
+    background-color: #eaeaea
+}
+
+.accmgr .user, .accmgr .group {
+    height:25px;
+}
+
+.accmgr .user>div, .accmgr .group>div{
+    height:100%;
+}
+
+.accmgr .pic {
+    float:left;
+    height:100%;
+    width:auto;
+    border-right: 1px #ddd solid;
+}
+
+.accmgr button {
+    height:25px;
+}
+
+.accmgr .groupMember{
+    height: 25px;
+    overflow:hidden;
+}
+
+.accmgr .groupMember img {
+    height: 25px;
+    border-left: 1px #ddd solid;
+}

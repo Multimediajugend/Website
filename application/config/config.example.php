@@ -19,12 +19,6 @@ ini_set("display_errors", 1);
  * Put your URL here, for local development "127.0.0.1" or "localhost" (plus sub-folder) is fine
  */
 define('URL', 'http://example.com/Website/');
-
-/**
- * Configuration for: Having more secure passwords
- * Put a little salt here
- */
-define('SALT', '!§$%&1n467');
  
 /**
  * Configuration for: Number of shown News
