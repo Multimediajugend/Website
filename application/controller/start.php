@@ -43,6 +43,19 @@ class Start extends Controller
 //            $showVersion = isset($news->version) ? $news->version : 1;
 //            include 'application/views/start/index/newsTemplate.php';
 //        }
+        
+        $id = 3;
+        $image = 'public/img/mephasin.png';
+        $headline = 'Media meets People';
+        $text = '<p>Dieses Jahr findet wieder unsere Veranstaltung "Media meets People" statt.</p>'
+                . '<p>Los geht es am 23.05.2015 ab 21 Uhr im Kinder und Jugendhaus "Substanz" in Chemnitz. In diesem Jahr erwartet euch Janiz als Support-Band sowie unser Haupt-Act Mephasin.</p>'
+                . '<p>Weitere Informationen sowie den Kartenvorverkauf findet ihr <a href="' . URL . 'start/news/Media_meets_People_2015">hier</a>.</p>';
+        $newsid = 0;
+        $published = date('D, d M Y H:i', 1426618800);
+        $curVersion = 1;
+        $newsVersions = null;
+        $showVersion = 1;
+        include 'application/views/start/index/newsTemplate.php';
 
         $id = 2;
         $image = 'public/img/vbmittweida.png';
@@ -72,6 +85,20 @@ class Start extends Controller
 
         
         require 'application/views/start/index/newsFooter.php';
+        require 'application/views/_templates/footer.php';
+    }
+    
+    public function news($news)
+    {
+        $newsFile = 'application/views/start/news/' . $news . '.php';
+        if(!file_exists($newsFile))
+        {
+            header("Location: ".URL);
+            die();
+        }
+        $title = 'News';
+        require 'application/views/_templates/header.php';
+        require $newsFile;
         require 'application/views/_templates/footer.php';
     }
 
