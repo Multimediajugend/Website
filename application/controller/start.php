@@ -48,7 +48,7 @@ class Start extends Controller
         $image = 'public/img/mephasin.png';
         $headline = 'Media meets People';
         $text = '<p>Dieses Jahr findet wieder unsere Veranstaltung "Media meets People" statt.</p>'
-                . '<p>Los geht es am 23.05.2015 ab 21 Uhr im Kinder und Jugendhaus "Substanz" in Chemnitz. In diesem Jahr erwartet euch Janiz als Support-Band sowie unser Haupt-Act Mephasin.</p>'
+                . '<p>Los geht es am 23.05.2015 ab 21 Uhr im Kinder und Jugendhaus "Substanz" in Chemnitz. In diesem Jahr erwartet euch Mental Hospital als Support-Band sowie unser Haupt-Act Mephasin.</p>'
                 . '<p>Weitere Informationen sowie den Kartenvorverkauf findet ihr <a href="' . URL . 'start/news/Media_meets_People_2015">hier</a>.</p>';
         $newsid = 0;
         $published = date('D, d M Y H:i', 1426618800);
