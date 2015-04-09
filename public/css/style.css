@@ -111,6 +111,8 @@
     .footerbox.middle {
         border-left: 1px solid #e4e4e4;
         border-right: 1px solid #e4e4e4;
+        text-align: center;
+        color: #999;
     }
 
 .pageTitle {

@@ -34,7 +34,7 @@ class mmpTicketModel
         $firstname = strip_tags($firstname);
         $lastname = strip_tags($lastname);
         $quantity = strip_tags($quantity);
-        $date = date('m/d/Y h:i:s', time());
+        $date = date('Y-m-d h:i:s', time());
  
         $sql = "INSERT INTO mmp2015 (email, name, lastname, date, quantity, member) VALUES (:mail, :name, :lastname, :date, :quantity, false)";
         $query = $this->db->prepare($sql);

@@ -1,3 +1,7 @@
+<?php
+session_set_cookie_params(10800);
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="de"  xmlns="http://www.w3.org/1999/xhtml">
 <head>
