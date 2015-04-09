@@ -21,13 +21,13 @@ if (!$fp) {
 		$res = fgets ($fp, 1024);
 		if (strcmp ($res, "VERIFIED") == 0) {
 			// PAYMENT VALID
-			better_mail('sebastian.flemig@gmail.com', 'IPN success', var_dump_ret($_POST));
+			better_mail('mmp@multimediajugend.de', 'IPN success', var_dump_ret($_POST));
 			send_confirmation_mail($_POST['payer_email'], $_POST['first_name'], $_POST['last_name'], $_POST['quantity']);
 		}
 
 		else if (strcmp ($res, "INVALID") == 0) {
 			// PAYMENT INVALID
-			better_mail('sebastian.flemig@gmail.com', 'IPN fail', var_dump_ret($_POST));
+			better_mail('mmp@multimediajugend.de', 'IPN fail', var_dump_ret($_POST));
 		}
 	}
 	fclose ($fp);
@@ -63,4 +63,8 @@ function send_confirmation_mail($to, $firstName, $lastName, $quantity) {
 	$content .= "Das Team des Multimediale Jugendarbeit Sachsen e.V.\r\n";
 	
 	better_mail($to, 'Unkostenbeitrag erhalten - Media Meets People', $content);
+        
+        $mmpt_ticket_model = $this->loadModel('mmpTicketModel');
+        $mmpt_ticket_model->addTicket($to, $firstName, $lastName, $quantity);
+
 }
