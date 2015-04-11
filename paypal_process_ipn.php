@@ -56,7 +56,7 @@ function send_confirmation_mail($to, $firstName, $lastName, $quantity) {
 	$content  = "Hallo " . $firstName . ",\r\n";
 	$content .= "\r\n";
 	$content .= "Wir haben den Unkostenbeitrag erhalten.\r\n";
-	$content .= "Name auf der Gästeliste: " . $firstName . " " . $lastName . "\r\n";
+	$content .= "Name auf der G&auml;steliste: " . $firstName . " " . $lastName . "\r\n";
 	$content .= "Anzahl Personen: " . $quantity . "\r\n";
 	$content .= "\r\n";
 	$content .= "Vielen Dank. Wir sehen uns bei Media Meets People!\r\n";
@@ -64,7 +64,10 @@ function send_confirmation_mail($to, $firstName, $lastName, $quantity) {
 	
 	better_mail($to, 'Unkostenbeitrag erhalten - Media Meets People', $content);
         
-        $mmpt_ticket_model = $this->loadModel('mmpTicketModel');
+        require './application/config/config.php';
+        require './application/libs/controller.php';
+        $tmp = new Controller();
+        
+        $mmpt_ticket_model = $tmp->loadModel('mmpTicketModel');
         $mmpt_ticket_model->addTicket($to, $firstName, $lastName, $quantity);
-
 }
