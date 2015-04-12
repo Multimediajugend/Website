@@ -57,7 +57,6 @@ class CounterModel {
             $sql = "UPDATE counter SET quantity=:cnt WHERE date = :date";
         }
         $cnt++;
-        echo $sql;
         $query = $this->db->prepare($sql);
         $query->execute(array(':date' => $date, ':cnt' => $cnt));
     }
