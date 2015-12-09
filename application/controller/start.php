@@ -43,6 +43,34 @@ class Start extends Controller
 //            $showVersion = isset($news->version) ? $news->version : 1;
 //            include 'application/views/start/index/newsTemplate.php';
 //        }
+
+        $id = 5;
+        $image = 'public/img/news/advent.jpg';
+        $headline = 'Advent, Advent';
+        $text = '<p>Die Adventszeit bricht heran, die Tage werden (hoffentlich noch) kühler und Schokolade, Plätzchen und heißer Kakao helfen über die trübe Jahreszeit hinweg.</p>'
+                . 'Wir wünschen all unseren Gästen und Mitgliedern einen schönen 1. Advent! Für unsere Mitglieder wird es zudem Mitte Dezember noch eine kleine gemütliche Weihnachtsfeier geben. Weitere Informationen erhaltet ihr per E-Mail.</p>';
+        $newsid = 0;
+        $published = date('D, d M Y H:i', 1448823600);
+        $curVersion = 1;
+        $newsVersions = null;
+        $showVersion = 1;
+        include 'application/views/start/index/newsTemplate.php';
+        
+        
+        $id = 4;
+        $image = 'public/img/news/cw12.jpg';
+        $headline = 'Clanwars 12';
+        $text = '<p>Vom 11.09. bis 13.09. laden wir euch wieder herzlich zu unserer großen Community-LAN-Party in Frankenberg/Sa. ein.</p>'
+                . '<p>Bis zu 100 Plätze sind zu vergeben und wir werden auch wieder Snacks und Getränke zu sehr günstigen Preisen anbieten.</p>'
+                . '<p>Für weitere Informationen besucht bitte unsere <a href="http://www.hsf-clanwars.de">LAN-Party-Webseite</a>.</p>';
+        $newsid = 0;
+        $published = date('D, d M Y H:i', 1431280800);
+        $curVersion = 1;
+        $newsVersions = null;
+        $showVersion = 1;
+        include 'application/views/start/index/newsTemplate.php';
+
+
         
         $id = 3;
         $image = 'public/img/news/mmp2015/mephasin.png';
