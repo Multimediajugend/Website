@@ -9,6 +9,7 @@
         </div>
         <div class="footerbox middle">
             Copyright 2010-<?php echo date("Y"); ?> Design, Logo and Content by Multimediale Jugendarbeit Sachsen e.V.<br /><br />
+            <p><a href="https://www.speicherzentrum.de" target="_blank"><img src="https://www.speicherzentrum.de/werbung/150Kb/234x60.jpg" border="0"></a></p>
             Besucher heute: <?php echo $counterDay; ?> Besucher gesamt: <?php echo $counterAll; ?>
         </div>
         <div class="footerbox">
