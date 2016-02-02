@@ -20,9 +20,9 @@ session_start();
     <!-- font awesome -->
     <link href="<?php echo URL; ?>public/css/font-awesome.min.css" rel="stylesheet">
     <!-- fonts-->
-    <link href='http://fonts.googleapis.com/css?family=Nunito:400' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Nunito:400' rel='stylesheet' type='text/css'>
     <!-- jQuery -->
-    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
     <!-- easyModal.js (flaviusmatis) -->
     <script src="<?php echo URL; ?>public/js/jquery.easyModal.js"></script>
     <!-- datetimepicker.js -->
